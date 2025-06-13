@@ -1,0 +1,504 @@
+{
+    "description": "ZEN04 Smart Plug",
+    "parameters": [
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Decide how the LED indicator behaves depending on the on/off status of the plug. Note that the LED will flash green 3 times anytime a setting is successfully changed.",
+                "pl": "Zdecyduj, jak zachowuje się wskaźnik LED w zależności od stanu włączenia/wyłączenia wtyczki. Należy pamiętać, że dioda LED mignie 3 razy na zielono po każdej udanej zmianie ustawienia."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "LED indicator is ON when the plug is ON, LED indicator is OFF when the plug is OFF",
+                            "pl": "Wskaźnik LED jest włączony, gdy wtyczka jest włączona, wskaźnik LED jest wyłączony, gdy wtyczka jest wyłączona"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is ON when the plug is OFF, LED indicator is OFF when the plug is ON",
+                            "pl": "Wskaźnik LED jest włączony, gdy wtyczka jest wyłączona, wskaźnik LED jest wyłączony, gdy wtyczka jest włączona"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is always OFF",
+                            "pl": "Wskaźnik LED jest zawsze wyłączony"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is always ON",
+                            "pl": "Wskaźnik LED jest zawsze włączony"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED Indicator Behavior",
+                "pl": "Wskaźnik LED (zachowanie)"
+            },
+            "parameterNumber": 1,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Use this parameter to set the auto turn-off timer: the time after which you want the Smart Plug to automatically turn off once it has been turned on. The number entered as value corresponds to the number of minutes.",
+                "pl": "Użyj tego parametru, aby ustawić timer automatycznego wyłączenia: czas, po którym Smart Plug ma się automatycznie wyłączyć po włączeniu. Liczba wprowadzona jako wartość odpowiada liczbie minut."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Wyłącznik czasowy wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto-off Timer",
+                "pl": "Automatyczny wyłącznik czasowy"
+            },
+            "parameterNumber": 2,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Use this parameter to set the auto turn-on timer: the time after which you want the Smart Plug to automatically turn on once it has been turned off. The number entered as value corresponds to the number of minutes.",
+                "pl": "Użyj tego parametru, aby ustawić timer automatycznego włączenia: czas, po którym Smart Plug ma się automatycznie włączyć po wyłączeniu. Liczba wprowadzona jako wartość odpowiada liczbie minut."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Włącznik czasowy wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto-on Timer",
+                "pl": "Automatyczny włącznik czasowy"
+            },
+            "parameterNumber": 3,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose the recovery state for your Smart Plug if power outage occurs.",
+                "pl": "Wybierz stan odzyskiwania dla swojej wtyczki Smart Plug, jeśli nastąpi przerwa w dostawie prądu."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Smart Plug remembers the status prior to power outage and turns back to it",
+                            "pl": "Smart Plug pamięta stan sprzed przerwy w zasilaniu i powraca do niego"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Smart Plug automatically turns OFF once power is restored (it ignores the status prior to power outage)",
+                            "pl": "Smart Plug automatycznie wyłącza się po przywróceniu zasilania (ignoruje stan sprzed przerwy w dostawie prądu)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Smart Plug automatically turns ON once power is restored (it ignores the status prior to power outage)",
+                            "pl": "Smart Plug automatycznie włącza się po przywróceniu zasilania (ignoruje stan sprzed przerwy w dostawie prądu)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "On/Off Status After Power Failure",
+                "pl": "Odzyskiwanie statusu wł/wył po awarii zasilania"
+            },
+            "parameterNumber": 4,
+            "size": 1
+        },
+        {
+            "defaultValue": 5,
+            "description": {
+                "en": "Choose how you want your Smart Plug to report power consumption to your hub. The number entered as value corresponds to the number of Watts the appliance needs to go over for the change to be reported. So if 5 Watts are entered by default, the Smart Plug will report any change in power usage over 5 Watts (whether it’s at least 5 Watts more or 5 Watts less compared to the previous report).",
+                "pl": "Wybierz, w jaki sposób Smart Plug ma raportować zużycie energii do huba. Liczba wpisana jako wartość odpowiada liczbie watów, które urządzenie musi przekroczyć, aby zmiana została zgłoszona. Jeśli więc domyślnie wpisano 5 W, Smart Plug zgłosi każdą zmianę w zużyciu energii powyżej 5 W (niezależnie od tego, czy jest to co najmniej 5 W więcej czy 5 W mniej w porównaniu z poprzednim raportem)."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disable threshold. Reports only based on frequency.",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 100,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "W"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Watt Report Threshold",
+                "pl": "Próg raportowania mocy chwilowej (W)"
+            },
+            "parameterNumber": 5,
+            "size": 1
+        },
+        {
+            "defaultValue": 5,
+            "description": {
+                "en": "The number entered as value corresponds to the number of minutes. So if 5 is entered by default, the Smart Plug will report power consumption (Wattage) every 5 minutes.",
+                "pl": "Liczba wprowadzona jako wartość odpowiada liczbie minut. Jeśli więc domyślnie wprowadzono 5, Smart Plug będzie raportował zużycie energii co 5 minut."
+            },
+            "format": {
+                "max": 65535,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "min"
+            },
+            "label": {
+                "en": "Watt Report Frequency",
+                "pl": "Interwał raportowania mocy"
+            },
+            "parameterNumber": 6,
+            "size": 4
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Choose how you want your Smart Plug to report electrical current (Amps) to your hub. The number entered as value corresponds to the number of Amps the appliance needs to go over for the change to be reported. Value 1 equals 0.1 A and value 10 equals 1 A. So if 1 is entered by default, the Smart Plug will report any change in electrical current over 0.1 Amps (whether it’s at least 0.1 A more or 0.1 A less compared to the previous report).",
+                "pl": "Wybierz sposób, w jaki Smart Plug ma raportować prąd elektryczny (Ampery) do huba. Liczba wprowadzona jako wartość odpowiada liczbie amperów, które urządzenie musi przekroczyć, aby zmiana została zgłoszona. Wartość 1 równa się 0,1 A, a wartość 10 równa się 1 A. Jeśli więc domyślnie wprowadzona jest wartość 1, Smart Plug zgłosi każdą zmianę w prądzie elektrycznym powyżej 0,1 A (niezależnie od tego, czy jest to co najmniej 0,1 A więcej czy 0,1 A mniej w porównaniu z poprzednim raportem)."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disable threshold. Reports only based on frequency.",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 50,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "A"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Amp Report Threshold",
+                "pl": "Próg raportowania natężenia prądu (A)"
+            },
+            "parameterNumber": 7,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Choose how you want your Smart Plug to report energy use (kWh) to your hub. The number entered as value corresponds to the number of kWh the appliance needs to go over for the change to be reported. Value 1 equals 0.01 kWh and value 100 equals 1 kWh. So if 1 is entered by default, the Smart Plug will report any change in energy use over 0.01 kWh (whether it’s at least 0.1 kWh more or 0.1 kWh less compared to the previous report).",
+                "pl": "Wybierz, w jaki sposób Smart Plug ma raportować zużycie energii (kWh) do huba. Liczba wprowadzona jako wartość odpowiada liczbie kWh, którą urządzenie musi przekroczyć, aby zmiana została zgłoszona. Wartość 1 równa się 0,01 kWh, a wartość 100 równa się 1 kWh. Jeśli więc domyślnie wprowadzono wartość 1, Smart Plug zgłosi każdą zmianę w zużyciu energii powyżej 0,01 kWh (niezależnie od tego, czy jest to co najmniej 0,1 kWh więcej czy 0,1 kWh mniej w porównaniu z poprzednim raportem)."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disable threshold. Reports only based on frequency.",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 200,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "kWh"
+                    }
+                ]
+            },
+            "label": {
+                "en": "kWh Report Threshold",
+                "pl": "Próg raportowania zużycia energii (kWh)"
+            },
+            "parameterNumber": 8,
+            "size": 1
+        },
+        {
+            "defaultValue": 2,
+            "description": {
+                "en": "Choose which brightness level you want the LED indicator to be at. This setting can also be changed by pressing the Z-Wave button 8 times quickly (it will cycle through the values). You should see the LED flash green two times to confirm a successful brightness change.",
+                "pl": "Wybierz poziom jasności, na którym chcesz, aby wskaźnik LED był. Ustawienie to można również zmienić poprzez szybkie 8-krotne naciśnięcie przycisku Z-Wave (spowoduje to zmianę wartości). Powinieneś zobaczyć jak dioda LED miga dwa razy na zielono, aby potwierdzić udaną zmianę jasności."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "High",
+                            "pl": "Wysoki"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Medium",
+                            "pl": "Średni"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Low",
+                            "pl": "Niski"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED Brightness Level",
+                "pl": "Wskaźnik LED (poziom jasności)"
+            },
+            "parameterNumber": 9,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Disable or enable power wattage reports sent from the plug. No power wattage reports from the device connected to the plug will be sent back to the hub if power wattage monitoring is disabled. Use this option to minimize the amount of reports you want the receive from the smart plug.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Watt reports enabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Watt reports disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Disable Watt Reports",
+                "pl": ""
+            },
+            "parameterNumber": 10,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Disable or enable electrical current reports sent from the plug. No electrical current reports from the device connected to the plug will be sent back to the hub if electrical current monitoring is disabled. Use this option to minimize the amount of reports you want the receive from the smart plug.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Amp reports enabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Amp reports disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Disable Amp Reports",
+                "pl": ""
+            },
+            "parameterNumber": 11,
+            "size": 1
+        },
+        {
+            "defaultValue": 60,
+            "description": {
+                "en": "The number entered as a value corresponds to the number of minutes. So if 30 is entered, the Plug will report electrical current values (Amperes) every 30 minutes."
+            },
+            "format": {
+                        "max": 65535,
+                        "min": 0,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+            },
+            "label": {
+                "en": "Amp Report Frequency"
+            },
+            "parameterNumber": 12,
+            "size": 4
+        },
+        {
+            "defaultValue": 60,
+            "description": {
+                "en": "The number entered as a value corresponds to the number of minutes. So if 30 is entered, the Plug will report Voltage values (Volts) every 30 minutes.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Volt reports disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 0,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Volt Report Frequency",
+                "pl": ""
+            },
+            "parameterNumber": 13,
+            "size": 4
+        },
+        {
+            "defaultValue": 60,
+            "description": {
+                "en": "Decide how often the plug will report kWh data to the hub (in minute intervals)."
+            },
+            "format": {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+            },
+            "label": {
+                "en": "kWh Report Frequency"
+            },
+            "parameterNumber": 14,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Disable or enable kWh reports sent from the plug.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "kWh reports enabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "kWh reports disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Disable kWh Reports",
+                "pl": ""
+            },
+            "parameterNumber": 15,
+            "size": 1
+        }
+    ]
+}
