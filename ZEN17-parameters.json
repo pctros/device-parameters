@@ -1,0 +1,1026 @@
+{
+    "description": "ZEN17 Universal Relay",
+    "parameters": [
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "All relays are force cut-off (irrespective of the state before the power cut)",
+                            "pl": "Wszystkie przekaźniki wymuszają wyłączenie (niezależnie od stanu przed przerwą w zasilaniu)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "All relays remember and restore their on/off state after a power failure ",
+                            "pl": "Wszystkie przekaźniki zapamiętują i przywracają stan włączony/wyłączony po awarii zasilania (ustawienie domyślne)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "All relays set to ON state (regardless of status prior to power failure)",
+                            "pl": "Wszystkie przekaźniki ustawione w stan włączenia (niezależnie od stanu przed awarią zasilania)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Relay 12 remembers and restores ON/OFF state after power failure, relay 2 set to ON state ",
+                            "pl": "Przekaźnik 1 pamięta i przywraca stan włączony/wyłączony po awarii zasilania, przekaźnik 2 ustawiony w stan włączony"
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Relay 2 remembers and restores ON/OFF state after power failure, relay 1 set to ON state ",
+                            "pl": "rzekaźnik 2 pamięta i przywraca stan włączony/wyłączony po awarii zasilania, przekaźnik 1 ustawiony w stan włączony"
+                        },
+                        "type": "value",
+                        "value": 4
+                    }
+                ]
+            },
+            "label": {
+                "en": "On/Off status after power failure",
+                "pl": "Stan włączania/wyłączania po awarii zasilania"
+            },
+            "parameterNumber": 1,
+            "size": 1
+        },
+        {
+            "defaultValue": 2,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Momentary switch for lights only",
+                            "pl": "Chwilowy przełącznik tylko dla świateł"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Toggle switch (light on when the switch is set to up, light off when the switch is set to down)",
+                            "pl": "Toggle switch (światło włączone, gdy przełącznik jest ustawiony w górę, światło wyłączone, gdy przełącznik jest ustawiony w dół)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Toggle switch (the state changes every time the switch is toggled)",
+                            "pl": "Toggle switch (stan zmienia się po każdym przełączeniu przełącznika)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Garage gate (momentary mode for control via Z-Wave)",
+                            "pl": "Brama garażowa (tryb chwilowy do sterowania przez Z-Wave)"
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Leakage alarm (water sensor)",
+                            "pl": "Alarm przecieku (czujnik wody)"
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "Heat alarm",
+                            "pl": "Alarm cieplny"
+                        },
+                        "type": "value",
+                        "value": 5
+                    },
+                    {
+                        "description": {
+                            "en": "Motion alarm",
+                            "pl": "Alarm ruchu"
+                        },
+                        "type": "value",
+                        "value": 6
+                    },
+                    {
+                        "description": {
+                            "en": "Open/close alarm (door sensor)",
+                            "pl": "Alarm otwarcia/zamknięcia (czujnik drzwi)"
+                        },
+                        "type": "value",
+                        "value": 7
+                    },
+                    {
+                        "description": {
+                            "en": "CO alarm ",
+                            "pl": "Alarm CO"
+                        },
+                        "type": "value",
+                        "value": 8
+                    },
+                    {
+                        "description": {
+                            "en": "CO2 alarm",
+                            "pl": "Alarm CO2"
+                        },
+                        "type": "value",
+                        "value": 9
+                    },
+                    {
+                        "description": {
+                            "en": "On/Off report (potential free contact switch/sensor)",
+                            "pl": "Raport o włączeniu/wyłączeniu (przełącznik/czujnik styków bezpotencjałowych)"
+                        },
+                        "type": "value",
+                        "value": 10
+                    },
+                    {
+                        "description": {
+                            "en": "garage door mode for relay, door sensor sensor for input",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 11
+                    }
+                ]
+            },
+            "label": {
+                "en": "Input type for relay 1 (S12)",
+                "pl": "Typ wejścia dla przekaźnika 1 (S1)"
+            },
+            "parameterNumber": 2,
+            "size": 1
+        },
+        {
+            "defaultValue": 2,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Momentary switch for lights only",
+                            "pl": "Chwilowy przełącznik tylko dla świateł"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Toggle switch (light on when the switch is set to up, light off when the switch is set to down)",
+                            "pl": "Toggle switch (światło włączone, gdy przełącznik jest ustawiony w górę, światło wyłączone, gdy przełącznik jest ustawiony w dół)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Toggle switch (the state changes every time the switch is toggled)",
+                            "pl": "Toggle switch (stan zmienia się po każdym przełączeniu przełącznika)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Garage gate (momentary mode for control via Z-Wave)",
+                            "pl": "Brama garażowa (tryb chwilowy do sterowania przez Z-Wave)"
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Leakage alarm (water sensor)",
+                            "pl": "Alarm przecieku (czujnik wody)"
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "Heat alarm",
+                            "pl": "Alarm cieplny"
+                        },
+                        "type": "value",
+                        "value": 5
+                    },
+                    {
+                        "description": {
+                            "en": "Motion alarm",
+                            "pl": "Alarm ruchu"
+                        },
+                        "type": "value",
+                        "value": 6
+                    },
+                    {
+                        "description": {
+                            "en": "Open/close alarm (door sensor)",
+                            "pl": "Alarm otwarcia/zamknięcia (czujnik drzwi)"
+                        },
+                        "type": "value",
+                        "value": 7
+                    },
+                    {
+                        "description": {
+                            "en": "CO alarm",
+                            "pl": "Alarm CO"
+                        },
+                        "type": "value",
+                        "value": 8
+                    },
+                    {
+                        "description": {
+                            "en": "CO2 alarm",
+                            "pl": "Alarm CO2"
+                        },
+                        "type": "value",
+                        "value": 9
+                    },
+                    {
+                        "description": {
+                            "en": "On/Off report ( potential free contact switch/sensor) ",
+                            "pl": "Raport o włączeniu/wyłączeniu (przełącznik/czujnik styków bezpotencjałowych)"
+                        },
+                        "type": "value",
+                        "value": 10
+                    },
+                    {
+                        "description": {
+                            "en": "garage door mode for relay, door sensor sensor for input",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 11
+                    }
+                ]
+            },
+            "label": {
+                "en": "Input type for relay 2 (S2)",
+                "pl": "Typ wejścia dla przekaźnika 2 (S2)"
+            },
+            "parameterNumber": 3,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "LED indicator is on when the switch is off, LED indicator is off when the switch is on",
+                            "pl": "Wskaźnik LED jest włączony, gdy przełącznik jest wyłączony, wskaźnik LED jest wyłączony, gdy przełącznik jest włączony "
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator on when button is on, LED indicator off when button is off ",
+                            "pl": "Wskaźnik LED włączony, gdy przycisk jest włączony, wskaźnik LED wyłączony, gdy przycisk jest wyłączony"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is always off",
+                            "pl": "Wskaźnik LED jest zawsze wyłączony"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is always on",
+                            "pl": "Wskaźnik LED jest zawsze włączony"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED indicator control",
+                "pl": "Sterowanie wskaźnikiem LED"
+            },
+            "parameterNumber": 5,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "max": 65535,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "min"
+            },
+            "label": {
+                "en": "Auto switch-off timer for relay 1",
+                "pl": "Timer automatycznego wyłączenia dla przekaźnika 1"
+            },
+            "parameterNumber": 6,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Timer wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto switch-on timer for relay 1",
+                "pl": "Timer automatycznego włączenia dla przekaźnika 1"
+            },
+            "parameterNumber": 7,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Timer wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto switch-off timer for relay 3",
+                "pl": "Timer automatycznego wyłączenia dla przekaźnika 2"
+            },
+            "parameterNumber": 8,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Timer wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto switch-on timer for relay 2",
+                "pl": "Timer automatycznego włączenia dla przekaźnika 2"
+            },
+            "parameterNumber": 9,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Input trigger off",
+                            "pl": "Wyzwalacz wejściowy wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Input trigger on",
+                            "pl": "Wyzwalacz wejściowy włączony"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Input Trigger for Relay 1",
+                "pl": "Wyzwalacz wejściowy dla przekaźnika 1"
+            },
+            "parameterNumber": 10,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Input trigger off",
+                            "pl": "Wyzwalacz wejściowy wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Input trigger off",
+                            "pl": "Wyzwalacz wejściowy wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Input trigger on",
+                            "pl": "Wyzwalacz wejściowy włączony"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Input Trigger for Relay 2",
+                "pl": "Wyzwalacz wejściowy dla przekaźnika 2"
+            },
+            "parameterNumber": 11,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Minutes",
+                            "pl": "Minuty"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Seconds",
+                            "pl": "Sekundy"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Hours",
+                            "pl": "Godziny"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto switch-off timer unit for relay 1",
+                "pl": "Jednostka timera automatycznego wyłączania dla przekaźnika 1"
+            },
+            "parameterNumber": 15,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Minutes",
+                            "pl": "Minuty"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Seconds",
+                            "pl": "Sekundy"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Hours",
+                            "pl": "Godziny"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto switch-on timer unit for relay 1",
+                "pl": "Jednostka timera automatycznego włączania dla przekaźnika 1"
+            },
+            "parameterNumber": 16,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Minutes",
+                            "pl": "Minuty"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Seconds",
+                            "pl": "Sekundy"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Hours",
+                            "pl": "Godziny"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto switch-off timer unit for relay 2",
+                "pl": "Jednostka timera automatycznego wyłączania dla przekaźnika 2"
+            },
+            "parameterNumber": 17,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Minutes",
+                            "pl": "Minuty"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Seconds",
+                            "pl": "Sekundy"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Hours",
+                            "pl": "Godziny"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto switch-on timer unit for relay 2",
+                "pl": "Jednostka timera automatycznego włączania dla przekaźnika 2"
+            },
+            "parameterNumber": 18,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "NO",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "water alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "heat alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 5
+                    },
+                    {
+                        "description": {
+                            "en": "PIR alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 6
+                    },
+                    {
+                        "description": {
+                            "en": "Door alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 7
+                    },
+                    {
+                        "description": {
+                            "en": "CO alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 8
+                    },
+                    {
+                        "description": {
+                            "en": "CO2 alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 9
+                    },
+                    {
+                        "description": {
+                            "en": "contact sensor",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 10
+                    }
+                ]
+            },
+            "label": {
+                "en": "Reversed reports for below sensors (NO -> NC) ",
+                "pl": ""
+            },
+            "parameterNumber": 19,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "NO",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "water alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "heat alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 5
+                    },
+                    {
+                        "description": {
+                            "en": "PIR alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 6
+                    },
+                    {
+                        "description": {
+                            "en": "Door alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 7
+                    },
+                    {
+                        "description": {
+                            "en": "CO alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 8
+                    },
+                    {
+                        "description": {
+                            "en": "CO2 alarm",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 9
+                    },
+                    {
+                        "description": {
+                            "en": "contact sensor",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 10
+                    }
+                ]
+            },
+            "label": {
+                "en": "Reversed reports for below sensors (NO -> NC)",
+                "pl": ""
+            },
+            "parameterNumber": 20,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "DC motor mode deactivated (relays will be activated whenever triggered)",
+                            "pl": "Tryb silnika DC wyłączony (przekaźniki będą aktywowane zawsze, gdy zostaną wyzwolone)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "DC motor mode on (the relay will check the status of the other relay when triggered and will switch off the other relay before activating, so that only one of the relays is on at the same time)",
+                            "pl": "Tryb silnika prądu stałego włączony (przekaźnik sprawdzi stan drugiego przekaźnika po wyzwoleniu i wyłączy drugi przekaźnik przed aktywacją, tak aby tylko jeden z przekaźników był włączony w tym samym czasie)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "DC motor mode",
+                "pl": "Tryb pracy silnika DC"
+            },
+            "parameterNumber": 24,
+            "size": 1
+        },
+        {
+            "defaultValue": 5,
+            "description": {
+                "en": "Trigger time duration for input 1 where 1 = 0.1s; 2 = 0.2s;... 100 = 10s"
+            },
+            "format": {
+                "max": 100,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range"
+            },
+            "label": {
+                "en": "Input 1 trigger time duration"
+            },
+            "parameterNumber": 25,
+            "size": 1
+        },
+        {
+            "defaultValue": 5,
+            "description": {
+                "en": "Trigger time duration for input 2 where 1 = 0.1s; 2 = 0.2s;... 100 = 10s"
+            },
+            "format": {
+                "max": 100,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range"
+            },
+            "label": {
+                "en": "Input 2 trigger time duration"
+            },
+            "parameterNumber": 26,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "input1 R1 ON ONLY ( never turn off with this input ) and input 2 trigger R1 OFF only ( never turn ON R1 )",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "input1 R2 ON ONLY ( never turn off with this input ) and input 2 trigger R2 OFF only ( never turn ON R1 )",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": " input1 R2 AND R1 ON ONLY ( never turn off with this input ) and input 2 trigger R2 AND R1 OFF only ( never turn ON R1 )",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "Only ON and Only OFF Triggers",
+                "pl": ""
+            },
+            "parameterNumber": 27,
+            "size": 1
+            },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "S1/C input (Param 2, ONLY values 0-3) should trigger BOTH relays R1/R2 at the same time: on and off. From Z-Wave UI: R1 or R2 should trigger BOTH relays R1/R2 at the same time: on and off. When the new parameter is enabled the S2/C input should be automatically separated from the output, and can be used independently - param 3 values 4-10 ONLY",
+                "pl": ""
+	},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disable",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Enable",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Simultaneously On/Off operation of the R1 and R2 relays",
+                "pl": ""
+            },
+            "parameterNumber": 28,
+            "size": 1
+        }
+    ]
+}
