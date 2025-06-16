@@ -1,0 +1,725 @@
+{
+    "description": "ZEN71 ON/OFF SWITCH",
+    "parameters": [
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose if you want the upper paddle to turn the light on or turn the light off when tapped.",
+                "pl": "Wybierz, czy górna łopatka ma włączać, czy wyłączać światło po dotknięciu."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "The upper switch turns the light on, the lower switch turns it off",
+                            "pl": "Górny przełącznik włącza światło, dolny je wyłącza"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "The upper switch turns the light off, the lower switch turns it on",
+                            "pl": "Górny przełącznik wyłącza światło, dolny je włącza"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Any switch turns the light on/off",
+                            "pl": "Dowolny przełącznik włącza/wyłącza światło"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "On/Off Paddle Orientation",
+                "pl": "Orientacja przełącznika"
+            },
+            "parameterNumber": 1,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose if you want the LED indicator to turn on when the switch is on or off, or if you want it to remain on or off at all times.",
+                "pl": "Wybierz, czy chcesz, aby wskaźnik LED włączał się, gdy przełącznik jest włączony lub wyłączony, czy też chcesz, aby pozostawał włączony lub wyłączony przez cały czas."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "LED indicator is on when the switch is off, LED indicator is off when the switch is on",
+                            "pl": "Wskaźnik LED jest włączony, gdy przełącznik jest wyłączony, wskaźnik LED jest wyłączony, gdy przełącznik jest włączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is on when the switch is on, LED indicator is off when the switch is off",
+                            "pl": "Wskaźnik LED jest włączony, gdy przełącznik jest włączony, wskaźnik LED jest wyłączony, gdy przełącznik jest wyłączony"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is always off",
+                            "pl": "Wskaźnik LED jest zawsze wyłączony"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator is always on",
+                            "pl": "Wskaźnik LED jest zawsze włączony"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED indicator control",
+                "pl": "Sterowanie wskaźnikiem LED"
+            },
+            "parameterNumber": 2,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Use this parameter to enable or disable the auto turn-off timer function (the time after which you want the switch to automatically turn off once it has been turned on).",
+                "pl": "Użyj tego parametru, aby włączyć lub wyłączyć funkcję automatycznego wyłączania timera (czas, po którym przełącznik ma się automatycznie wyłączyć po włączeniu)."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Timer wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto turn-off timer",
+                "pl": "Timer automatycznego wyłączania"
+            },
+            "parameterNumber": 3,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Use this parameter to enable or disable the auto turn-on timer function (the time after which you want the switch to automatically turn on once it has been turned off).",
+                "pl": "Użyj tego parametru, aby włączyć lub wyłączyć funkcję timera automatycznego włączania (czas, po którym przełącznik ma się automatycznie włączyć po wyłączeniu)."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Timer wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto turn-on timer",
+                "pl": "Timer automatycznego włączania"
+            },
+            "parameterNumber": 5,
+            "size": 4
+        },
+        {
+            "defaultValue": 15,
+            "description": {
+                "en": "Choose which physical and Z-Wave triggers should prompt the switch to send a status change report to the associated devices.",
+                "pl": "Wybierz, które fizyczne i Z-Wave wyzwalacze powinny skłonić przełącznik do wysłania raportu o zmianie stanu do powiązanych urządzeń."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "None",
+                            "pl": "Brak"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Local",
+                            "pl": "Lokalny"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "3way",
+                            "pl": "Przełącznik schodowy"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "3way & local",
+                            "pl": "Przełącznik schodowy i lokalny"
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Z-Wave hub",
+                            "pl": "Hub Z-Wave"
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "Z-Wave hub & local",
+                            "pl": "Hub Z-Wave i lokalny"
+                        },
+                        "type": "value",
+                        "value": 5
+                    },
+                    {
+                        "description": {
+                            "en": "Z-Wave hub & 3-way",
+                            "pl": "Hub Z-Wave i przełącznik schowowy"
+                        },
+                        "type": "value",
+                        "value": 6
+                    },
+                    {
+                        "description": {
+                            "en": "Z-Wave hub & local & 3way",
+                            "pl": "Hub Z-Wave, przełącznik schodowy i lokalny"
+                        },
+                        "type": "value",
+                        "value": 7
+                    },
+                    {
+                        "description": {
+                            "en": "Timer",
+                            "pl": "Timer"
+                        },
+                        "type": "value",
+                        "value": 8
+                    },
+                    {
+                        "description": {
+                            "en": "Timer & local",
+                            "pl": "Timer i lokalny"
+                        },
+                        "type": "value",
+                        "value": 9
+                    },
+                    {
+                        "description": {
+                            "en": "Timer & 3-way",
+                            "pl": "Timer i przełącznik schodowy"
+                        },
+                        "type": "value",
+                        "value": 10
+                    },
+                    {
+                        "description": {
+                            "en": "Timer & 3-way & local",
+                            "pl": "Timer, przełącznik schodowy i lokalny"
+                        },
+                        "type": "value",
+                        "value": 11
+                    },
+                    {
+                        "description": {
+                            "en": "Timer & Z-Wave hub",
+                            "pl": "Timer i hub Z-Wave"
+                        },
+                        "type": "value",
+                        "value": 12
+                    },
+                    {
+                        "description": {
+                            "en": "Timer & Z-Wave hub & local",
+                            "pl": "Timer, hub Z-Wave i lokalny"
+                        },
+                        "type": "value",
+                        "value": 13
+                    },
+                    {
+                        "description": {
+                            "en": "Timer & z-wave hub & 3-way",
+                            "pl": "Timer, hub Z-Wave i przełącznik schodowy"
+                        },
+                        "type": "value",
+                        "value": 14
+                    },
+                    {
+                        "description": {
+                            "en": "All",
+                            "pl": "Wszystkie"
+                        },
+                        "type": "value",
+                        "value": 15
+                    }
+                ]
+            },
+            "label": {
+                "en": "Association Setting",
+                "pl": "Ustawienia asocjacji"
+            },
+            "parameterNumber": 7,
+            "size": 1
+        },
+        {
+            "defaultValue": 2,
+            "description": {
+                "en": "Set the on off status for the switch after power failure.",
+                "pl": "Ustawienie stanu włączenia i wyłączenia przełącznika po awarii zasilania."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Forcing OFF (irrespective of the status before the power failure)",
+                            "pl": "Wymuszenie wyłączenia (niezależnie od stanu przed zanikiem zasilania)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Forcing ON (irrespective of the status before the power failure)",
+                            "pl": "Wymuszenie włączenia (niezależnie od stanu sprzed zaniku zasilania)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Remembers and restores the on/off state after a power failure",
+                            "pl": "Zapamiętuje i przywraca stan włączony/wyłączony po awarii zasilania"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Power on/off status after power failure",
+                "pl": "Stan włączania/wyłączania po awarii zasilania"
+            },
+            "parameterNumber": 8,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable or disable scene control functionality for quick double tap triggers.",
+                "pl": "Włączenie lub wyłączenie funkcji sterowania scenami w celu szybkiego wyzwalania podwójnym dotknięciem."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Scene control off",
+                            "pl": "Sterowanie sceną wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Scene control on",
+                            "pl": "Sterowanie sceną włączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Enable/Disable Scene Control",
+                "pl": "Włączanie/wyłączanie sterowania sceną"
+            },
+            "parameterNumber": 9,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Enable or disable local on/off control. If enabled, you will only be able to control the connected light via Z-Wave. Scenes and other functionality will still be available through paddles.",
+                "pl": "Włącz lub wyłącz lokalne sterowanie włączaniem/wyłączaniem. Jeśli opcja ta jest włączona, podłączonym oświetleniem będzie można sterować wyłącznie za pośrednictwem Z-Wave. Sceny i inne funkcje będą nadal dostępne za pomocą łopatek."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Physical paddle control disabled",
+                            "pl": "Sterowanie za pomocą przełączników wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Physical paddle control enabled",
+                            "pl": "Sterowanie za pomocą przełączników włączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Physical paddle and Z-Wave control disabled",
+                            "pl": "Sterowanie za pomocą przełączników i Z-Wave wyłączone"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Smart bulb mode: Enable/Disable Paddle / Z-Wave Control",
+                "pl": "Tryb inteligentnej żarówki: Włączanie/wyłączanie sterowania przełącznikiem / Z-Wave"
+            },
+            "parameterNumber": 11,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose the type of 3-way switch you want to use with this switch in a 3-way set-up.",
+                "pl": "Wybierz typ przełącznika schodowego, który ma być używany z tym przełącznikiem w konfiguracji schodowa."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Standard mechanical 3-way on/off switch, a connected 3-way switch is used to switch the light on and off",
+                            "pl": "Standardowy mechaniczny schodowy włącznik/wyłącznik, do włączania i wyłączania światła służy podłączony przełącznik schodowy"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Momentary switch, click once to change state (light on or off)",
+                            "pl": "Przełącznik chwilowy, kliknij raz, aby zmienić stan (światło włączone lub wyłączone)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "3-way switch type",
+                "pl": "Typ przełącznika schodowego"
+            },
+            "parameterNumber": 12,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Set reporting behavior for disabled physical control.",
+                "pl": "Ustaw zachowanie raportowania dla wyłączonej kontroli fizycznej."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Switch reports on/off status and LED indicator status change even if physical and Z-Wave control is disabled",
+                            "pl": "Przełącznik zgłasza stan włączania/wyłączania i zmianę stanu wskaźnika LED, nawet jeśli sterowanie fizyczne i Z-Wave jest wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "The switch does not report on/off status and does not change the state of the LED indicator when physical (and Z-Wave) control is disabled",
+                            "pl": "Przełącznik nie zgłasza stanu włączenia/wyłączenia i nie zmienia stanu wskaźnika LED, gdy sterowanie fizyczne (i Z-Wave) jest wyłączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Reporting for Disabled Relay: Smart Bulb Mode",
+                "pl": "Raportowanie dla wyłączonego przekaźnika: Tryb inteligentnej żarówki"
+            },
+            "parameterNumber": 13,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Choose the color of the LED indicator.",
+                "pl": "Wybierz kolor wskaźnika LED."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "White",
+                            "pl": "Biały"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Blue",
+                            "pl": "Niebieski"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Green",
+                            "pl": "Zielony"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Red",
+                            "pl": "Czerwony"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED indicator color",
+                "pl": "Kolor wskaźnika LED"
+            },
+            "parameterNumber": 14,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Choose the LED indicator's brightness level.",
+                "pl": "Wybierz poziom jasności wskaźnika LED."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Bright (100%)",
+                            "pl": "Jasny (100%)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Medium (60%)",
+                            "pl": "Średni (60%)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Low (30%)",
+                            "pl": "Niski (30%)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED indicator brightness",
+                "pl": "Jasność wskaźnika LED"
+            },
+            "parameterNumber": 15,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Choose how the switch reports its status back to the hub.",
+                "pl": "Wybierz sposób, w jaki przełącznik raportuje swój status do huba."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Binary switch report for Z-Wave control, BASIC SET report for switch control",
+                            "pl": "Raport przełącznika binarnego dla sterowania Z-Wave, raport BASIC SET dla sterowania przełącznikami"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Binary switch status report for Z-Wave control and switch control",
+                            "pl": "Raport o stanie przełącznika binarnego dla sterowania Z-Wave i sterowania przełącznikami"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Switch Reports",
+                "pl": "Raporty asocjacyjne"
+            },
+            "parameterNumber": 16,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable or disable programming functionality on the switch paddles. If this setting is disabled, then inclusion, exclusion, smart bulb mode no longer work when switch paddles are activated (factory reset and scene control will still work) - that means you can now use triple-tap triggers on the switch for scenes and remote control of other devices.",
+                "pl": "Włączenie lub wyłączenie funkcjonalności programowania na łopatkach przełącznika. Jeśli to ustawienie jest wyłączone, włączenie, wykluczenie, tryb inteligentnej żarówki nie będą już działać, gdy łopatki przełącznika są aktywowane (przywracanie ustawień fabrycznych i sterowanie scenami będą nadal działać) - oznacza to, że można teraz używać wyzwalaczy potrójnego dotknięcia na przełączniku do scen i zdalnego sterowania innymi urządzeniami."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Programming enabled",
+                            "pl": "Programowanie włączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Programming disabled",
+                            "pl": "Programowanie wyłączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Enable/Disable Programming from the Paddle.",
+                "pl": "Włączenie lub wyłączenie funkcji programowania na przełącznikach ściemniaczy."
+            },
+            "parameterNumber": 17,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable scene control functionality from the momentary switch in a 3-way installation.",
+                "pl": "Umożliwia sterowanie scenami za pomocą przełącznika chwilowego w instalacji schodowej."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Scene control commands from remote 3-way switch disabled",
+                            "pl": "Polecenia sterowania sceną ze zdalnego przełącznika schodowego wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Scene control commands from remote 3-way switch enabled",
+                            "pl": "Polecenia sterowania sceną ze zdalnego przełącznika schodowego włączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Enable scene control from momentary switch in 3-way installation",
+                "pl": "Umożliwienie sterowanie scenami za pomocą przełącznika chwilowego w instalacji schodowej"
+            },
+            "parameterNumber": 18,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable/disable LED indicator for setting changes. Choose if you want the LED indicators to flash whenever a parameter is adjusted on the device to confirm the change. Disable this feature if you're using the LED indicators.",
+                "pl": "Włączanie/wyłączanie wskaźnika LED dla zmian ustawień. Wybierz, czy chcesz, aby wskaźniki LED migały za każdym razem, gdy parametr jest regulowany na urządzeniu w celu potwierdzenia zmiany. Wyłącz tę funkcję, jeśli używasz wskaźników LED."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "LED blinking enabled",
+                            "pl": "Włączone migania diody LED"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "LED blinking disabled",
+                            "pl": "Wyłączone migania diody LED"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Disable LED blinking when a setting is changed",
+                "pl": "Wyłączenie migania diody LED przy zmianie ustawienia"
+            },
+            "parameterNumber": 19,
+            "size": 1
+        }
+    ]
+}
