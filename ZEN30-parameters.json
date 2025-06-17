@@ -1,0 +1,1440 @@
+{
+    "description": "ZEN30 Double Switch",
+    "parameters": [
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the LED indicator to turn on when the dimmer (light) is on or off, or if you want it to remain on or off at all times.",
+            "pl": "."
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "LED on when dimmer off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED on when dimmer on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "LED always off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "LED always on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer LED Indicator",
+            "pl": ""
+        },
+        "parameterNumber": 1,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the LED indicator to turn on when the relay is on or off, or if you want it to remain on or off at all times.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "LED on when relay off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED on when relay on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "LED always off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "LED always on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay LED Indicator",
+            "pl": ""
+        },
+        "parameterNumber": 2,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the color of the LED indicator of the dimmer. 0 white, 1 blue, 2 green, 3 red.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "White",
+                "pl": "Biały"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Blue",
+                "pl": "Niebieski"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Green",
+                "pl": "Zielony"
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "Red",
+                "pl": "Czerwony"
+                },
+                "type": "value",
+                "value": 3
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer LED Indicator Color",
+            "pl": ""
+        },
+        "parameterNumber": 3,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the color of the LED indicator of the relay. 0 white, 1 blue, 2 green, 3 red.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "White",
+                "pl": "Biały"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Blue",
+                "pl": "Niebieski"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Green",
+                "pl": "Zielony"
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "Red",
+                "pl": "Czerwony"
+                },
+                "type": "value",
+                "value": 3
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay LED Indicator Color",
+            "pl": ""
+        },
+        "parameterNumber": 4,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Choose the LED indicator's brightness level for the dimmer. 0 bright (100%); 1 medium (60%); 2 low (30%).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Bright (100%)",
+                "pl": "Jasny (100%)"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Medium (60%)",
+                "pl": "Średni (60%)"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Low (30%)",
+                "pl": "Niski (30%)"
+                },
+                "type": "value",
+                "value": 2
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer LED Indicator Brightness",
+            "pl": ""
+        },
+        "parameterNumber": 5,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Choose the LED indicator's brightness level for the relay. 0 bright (100%); 1 medium (60%); 2 low (30%).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Bright (100%)",
+                "pl": "Jasny (100%)"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Medium (60%)",
+                "pl": "Średni (60%)"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Low (30%)",
+                "pl": "Niski (30%)"
+                },
+                "type": "value",
+                "value": 2
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay LED Indicator Brightness",
+            "pl": ""
+        },
+        "parameterNumber": 6,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Choose if you want the LED indicators next to the dimmer to light up when a scene is selected.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "LEDs enabled to for scene triggers",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LEDs enabled to for scene triggers",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Scene LED Indicator",
+            "pl": ""
+        },
+        "parameterNumber": 7,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Auto-off timer will automatically turn the dimmer off after x minutes once it has been turned on.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Timer disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 65535,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "min"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Auto Turn-Off Timer",
+            "pl": "Timer automatycznego wyłączania dla ściemniacza"
+        },
+        "parameterNumber": 8,
+        "size": 4
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Auto-on timer will automatically turn the dimmer on after x minutes once it has been turned off.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Timer disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 65535,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "min"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Auto Turn-On Timer",
+            "pl": ""
+        },
+        "parameterNumber": 9,
+        "size": 4
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Auto-off timer will automatically turn the relay off after x minutes once it has been turned on.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Timer disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 65535,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "min"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay Auto Turn-Off Timer",
+            "pl": ""
+        },
+        "parameterNumber": 10,
+        "size": 4
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Auto-on timer will automatically turn the relay on after x minutes once it has been turned off.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "timer off",
+                "pl": "timer wyłączony"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 65535,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "min"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay Auto Turn-On Timer",
+            "pl": ""
+        },
+        "parameterNumber": 11,
+        "size": 4
+        },
+        {
+        "defaultValue": 3,
+        "description": {
+            "en": "Set the on off status for the dimmer and relay after power failure.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "dimmer forced to off, relay forced to on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "dimmer forced to on, relay forced to off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "remembers and restores on/off status for dimmer and relay after power failure (default)",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": " remembers and restores on/off status for dimmer, relay forced to on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "remembers and restores on/off status for dimmer, relay forced to off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "dimmer forced to on, remembers and restores on/off status for relay",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            },
+            {
+                "description": {
+                "en": "dimmer forced to off, remembers and restores on/off status for relay",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 7
+            },
+            {
+                "description": {
+                "en": " dimmer and relay forced to on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 8
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "On/Off Status After Power Failure",
+            "pl": ""
+        },
+        "parameterNumber": 12,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Adjust the ramp rate ON for your dimmer when the top paddle is pressed for a smooth fade-in effect (in seconds).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "instant on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "s"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Physical Ramp Rate ON",
+            "pl": ""
+        },
+        "parameterNumber": 13,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Set the minimum brightness level (in %) for the dimmer. You won't be able to dim the light below the set value",
+            "pl": ""
+        },
+        "format": {
+            "scale": 1,
+            "step": 1,
+            "type": "range",
+            "unit": "%",
+            "max": 99,
+            "min": 1
+        },
+        "label": {
+            "en": "Minimum brightness",
+            "pl": "Jasność minimalna"
+        },
+        "parameterNumber": 14,
+        "size": 1
+        },
+        {
+        "defaultValue": 99,
+        "description": {
+            "en": "Set the maximum brightness level (in %) for the dimmer. You won't be able to add brightness to the light beyond the set value.",
+            "pl": "."
+        },
+        "format": {
+            "scale": 1,
+            "step": 1,
+            "type": "range",
+            "unit": "%",
+            "max": 99,
+            "min": 1
+        },
+        "label": {
+            "en": "Maximum brightness",
+            "pl": "Jasność maksymalna"
+        },
+        "parameterNumber": 15,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose how you'd like the dimmer to report when paddles are tapped and held and physical / Z-Wave control is enabled or disabled.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Reports each brightness level if physical and Z-Wave control disabled (reports final level if physical and Z-Wave control enabled)",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Always reports final brightness level only (Z-Wave multilevel reports, physical basic reports)",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Multilevel Dimming Reports",
+            "pl": ""
+        },
+        "parameterNumber": 16,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose what you'd like the dimmer to do when you double-tap the upper paddle.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": " on to full brightness",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "on to the custom brightness (from param 23)",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "on to max brightness (from param 15)",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "double tap disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Double Tap Up",
+            "pl": ""
+        },
+        "parameterNumber": 17,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose what you'd like the dimmer to do when you tap the upper paddle once.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "on to the last brightness level",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "on to the custom brightness (from param 23)",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": " on to max brightness (from param 15)",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "on to full brightness",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Single Tap Up",
+            "pl": ""
+        },
+        "parameterNumber": 18,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Enable or disable physical and Z-Wave on/off and dimming control for the dimmer. Disable both for smart bulbs.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Disable paddle",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Enable paddle and Z-Wave",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Disable paddle and Z-Wave",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Load Control (Smart Bulb Mode)",
+            "pl": ""
+        },
+        "parameterNumber": 19,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Enable or disable physical and Z-Wave on/off control for the relay. Disable both for smart bulbs.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Disable button",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Enable button and Z-Wave",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Disable button and Z-Wave",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay Load Control (Smart Bulb Mode)",
+            "pl": ""
+        },
+        "parameterNumber": 20,
+        "size": 1
+        },
+        {
+        "defaultValue": 4,
+        "description": {
+            "en": "Set the number of seconds it takes to get from 0% to 100% brightness when pressing and holding the paddle (physical dimming).",
+            "pl": ""
+        },
+        "format": {
+            "scale": 1,
+            "step": 1,
+            "type": "range",
+            "unit": "s",
+            "max": 99,
+            "min": 1
+        },
+        "label": {
+            "en": "Dimming Speed",
+            "pl": "Szybkość ręcznego ściemniania"
+        },
+        "parameterNumber": 21,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Set the custom brightness level (or leave the last brightness level) for single tap and double tap on the dimmer.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "last brightness level",
+                "pl": "ostatni poziom jasności "
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "%"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Physical Custom Brightness On",
+            "pl": ""
+        },
+        "parameterNumber": 23,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Set reporting behavior for disabled physical control of the load connected to the dimmer (smart bulb mode).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": " Reports status / changes LED",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Doesn't report status / change LED",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Disabled Load Behavior",
+            "pl": ""
+        },
+        "parameterNumber": 24,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Set reporting behavior for disabled physical control of the load connected to the relay (smart bulb mode).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Reports status / changes LED",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Doesn't report status / change LED",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay Disabled Load Behavior",
+            "pl": ""
+        },
+        "parameterNumber": 25,
+        "size": 1
+        },
+        {
+        "defaultValue": 20,
+        "description": {
+            "en": "Set the brightness level the dimmer will turn on to when off and when the lower paddle is held DOWN for 2.5-3 seconds.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "feature disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "%"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Night Light",
+            "pl": ""
+        },
+        "parameterNumber": 26,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the upper paddle to turn the light on or turn the light off when tapped.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "Up for on, down for off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Up for off, down for on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": " Up or down for on/off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Paddle Orientation",
+            "pl": ""
+        },
+        "parameterNumber": 27,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Enable or disable scene control functionality for quick multi tap triggers on the dimmer.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "scene control disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "scene control enabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Scene Control",
+            "pl": ""
+        },
+        "parameterNumber": 28,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Enable or disable scene control functionality for quick multi tap triggers on the relay button.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "scene control disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "scene control enabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Relay Scene Control",
+            "pl": ""
+        },
+        "parameterNumber": 29,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Enable (0) or disable (1) programming functionality on the dimmer paddles. For advanced users only, changes not recommended.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "programming enabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "programming disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Disable Dimmer Paddle Programming",
+            "pl": ""
+        },
+        "parameterNumber": 30,
+        "size": 1
+        },
+        {
+        "defaultValue": 2,
+        "description": {
+            "en": "Adjust the ramp rate OFF for your dimmer when the bottom paddle is pressed for a smooth fade-out effect (in seconds).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "instant off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "s"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Physical Ramp Rate OFF",
+            "pl": ""
+        },
+        "parameterNumber": 31,
+        "size": 1
+        },
+        {
+        "defaultValue": 255,
+        "description": {
+            "en": "Adjust the ramp rate ON for your dimmer when controlled with Z-Wave for a smooth fade-in effect (in seconds).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "instant on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "s"
+            },
+            {
+                "description": {
+                "en": "match physical",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 255
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Z-Wave Ramp Rate ON",
+            "pl": ""
+        },
+        "parameterNumber": 32,
+        "size": 1,
+        "unsigned": true
+        },
+        {
+        "defaultValue": 255,
+        "description": {
+            "en": "Adjust the ramp rate OFF for your dimmer when controlled with Z-Wave for a smooth fade-out effect (in seconds).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "instant off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "s"
+            },
+            {
+                "description": {
+                "en": "match physical",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 255
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Z-Wave Ramp Rate OFF",
+            "pl": ""
+        },
+        "parameterNumber": 33,
+        "size": 1,
+        "unsigned": true
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if the LED should flash whenever a parameter is adjusted on the device to confirm the change (0) or disable this feature (1).",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": " LED indicator flashes to confirm a setting change",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": " LED indicator doesn't flash if a setting is changed",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Disable LED Indicator Flash On Setting Change",
+            "pl": ""
+        },
+        "parameterNumber": 34,
+        "size": 1
+        },
+        {
+        "defaultValue": 15,
+        "description": {
+            "en": "Choose physical and Z-Wave triggers for the device to send a status change report to the associated devices. See manual for details.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "none",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "physical tap on ZEN30 only",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "timer only",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "physical tap on ZEN30 or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": "Z-Wave command from hub",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "physical tap on ZEN30 or Z-Wave command from hub",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "Z-Wave command from hub or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            },
+            {
+                "description": {
+                "en": "physical tap on ZEN30, Z-Wave command from hub, or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 7
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Association Reports",
+            "pl": ""
+        },
+        "parameterNumber": 35,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Convert the dimmer to an on off switch. When enabled, the dimmer will behave as a switch without the ability to dim.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "enabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "On Off Switch Mode",
+            "pl": ""
+        },
+        "parameterNumber": 36,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Set custom brightness (or leave last brightness) for Basic Set ON commands when the dimmer is triggered by another device in direct association.",
+            "pl": ""
+        },
+        "format": {
+            "values": [
+            {
+                "description": {
+                "en": "last brightness level",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "unit": "%"
+            }
+            ],
+            "type": "enumerated"
+        },
+        "label": {
+            "en": "Dimmer Basic Set Custom Brightness On",
+            "pl": ""
+        },
+        "parameterNumber": 37,
+        "size": 1
+        }
+    ]
+}
