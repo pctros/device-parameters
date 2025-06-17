@@ -1,0 +1,1329 @@
+{
+    "description": "ZEN32 Scene Controller",
+    "parameters": [
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the LED indicator to turn on when the relay (light) is on or off, or if you want it to remain on or off at all times.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "LED on when relay off, LED off when relay on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": " LED on when relay on, LED off when relay off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": " LED always off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "LED always on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Mode For Relay Button",
+            "pl": ""
+        },
+        "parameterNumber": 1,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the LED indicator to turn on when Button 1 is on or off, or if you want it to remain on or off at all times.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "LED on when button off, LED off when button on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED on when button on, LED off when button off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": " LED always off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "LED Always on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Mode for button 1",
+            "pl": ""
+        },
+        "parameterNumber": 2,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the LED indicator to turn on when Button 2 is on or off, or if you want it to remain on or off at all times.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "LED on when button off, LED off when button on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED on when button on, LED off when button off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "LED Always off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "LED Always on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Mode For Button 2",
+            "pl": ""
+        },
+        "parameterNumber": 3,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the LED indicator to turn on when Button 3 is on or off, or if you want it to remain on or off at all times.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "LED on when button off, LED off when button on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED on when button on, LED off when button off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "LED Always off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "LED Always on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Mode For Button 3",
+            "pl": ""
+        },
+        "parameterNumber": 4,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if you want the LED indicator to turn on when Button 4 is on or off, or if you want it to remain on or off at all times.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "LED on when button off, LED off when button on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED on when button on, LED off when button off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "LED always off",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "LED Always on",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Mode For Button 4",
+            "pl": ""
+        },
+        "parameterNumber": 5,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the color of the relay button LED indicator. 0: white, 1: blue, 2: green, 3: red, 4: magenta, 5: yellow, 6: cyan.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "White",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Blue",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Green",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "Red",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": "Magenta",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "Yellow",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "Cyan",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            }
+            ]
+        },
+        "label": {
+            "en": "LED always off",
+            "pl": ""
+        },
+        "parameterNumber": 6,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the color of button 1 LED indicator. 0: White, 1: Blue, 2: Green, 3: Red, 4: Magenta, 5: Yellow, 6: Cyan.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "White",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Blue",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Green",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "Red",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": "Magenta",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "Yellow",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "Cyan",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Color For Button 1",
+            "pl": ""
+        },
+        "parameterNumber": 7,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the color of button 2 LED indicator. 0: White, 1: Blue, 2: Green, 3: Red, 4: Magenta, 5: Yellow, 6: Cyan.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "White",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Blue",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Green",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "Red",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": "Magenta",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "Yellow",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "Cyan",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Color For Button 2",
+            "pl": ""
+        },
+        "parameterNumber": 8,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the color of button 3 LED indicator. 0: White, 1: Blue, 2: Green, 3: Red, 4: Magenta, 5: Yellow, 6: Cyan.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "White",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Blue",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Green",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "Red",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": "Magenta",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "Yellow",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "Cyan",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Color For Button 3",
+            "pl": ""
+        },
+        "parameterNumber": 9,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the color of button 4 LED indicator. 0: White, 1: Blue, 2: Green, 3: Red, 4: Magenta, 5: Yellow, 6: Cyan.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "White",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Blue",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Green",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "Red",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": "Magenta",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "Yellow",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "Cyan",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Color For Button 4",
+            "pl": ""
+        },
+        "parameterNumber": 10,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Choose the relay button LED indicator's brightness level. 0: bright (100%); 1: medium (60%); 2: low (30%).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Bright (100%)",
+                "pl": "Jasny (100%)"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Medium (60%)",
+                "pl": "Średni (60%)"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Low (30%)",
+                "pl": "Niski (30%)"
+                },
+                "type": "value",
+                "value": 2
+            }
+            ]
+        },
+        "label": {
+            "en": "LED Brightness For Relay Button",
+            "pl": ""
+        },
+        "parameterNumber": 11,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Choose button 1 LED indicator's brightness level. 0: bright (100%); 1: medium (60%); 2: low (30%).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Bright (100%)",
+                "pl": "Jasny (100%)"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Medium (60%)",
+                "pl": "Średni (60%)"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Low (30%)",
+                "pl": "Niski (30%)"
+                },
+                "type": "value",
+                "value": 2
+            }
+            ]
+        },
+        "label": {
+            "en": "LED brightness for button 1",
+            "pl": ""
+        },
+        "parameterNumber": 12,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Choose button 2 LED indicator's brightness level. 0: bright (100%); 1: medium (60%); 2: low (30%).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Bright (100%)",
+                "pl": "Jasny (100%)"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Medium (60%)",
+                "pl": "Średni (60%)"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Low (30%)",
+                "pl": "Niski (30%)"
+                },
+                "type": "value",
+                "value": 2
+            }
+            ]
+        },
+        "label": {
+            "en": "LED brightness for button 2",
+            "pl": ""
+        },
+        "parameterNumber": 13,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Choose button 4 LED indicator's brightness level. 0: bright (100%); 1: medium (60%); 2: low (30%).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Bright (100%)",
+                "pl": "Jasny (100%)"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Medium (60%)",
+                "pl": "Średni (60%)"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Low (30%)",
+                "pl": "Niski (30%)"
+                },
+                "type": "value",
+                "value": 2
+            }
+            ]
+        },
+        "label": {
+            "en": "LED brightness for button 4",
+            "pl": ""
+        },
+        "parameterNumber": 15,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Auto-off timer will automatically turn the relay off after x minutes once it has been turned on.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Timer Disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "min": 1,
+                "max": 65535,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "min"
+            }
+            ]
+        },
+        "label": {
+            "en": "Auto Turn-Off Timer For Relay",
+            "pl": ""
+        },
+        "parameterNumber": 16,
+        "size": 4
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Auto-on timer will automatically turn the relay on after x minutes once it has been turned off.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Timer Disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "type": "range",
+                "min": 1,
+                "max": 65535,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "min"
+            }
+            ]
+        },
+        "label": {
+            "en": "Auto Turn-On Timer For Relay",
+            "pl": ""
+        },
+        "parameterNumber": 17,
+        "size": 4
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Set the on off status for the relay after power failure.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "remembers and restores status",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "always off once restored",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "always on once restored",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            }
+            ]
+        },
+        "label": {
+            "en": "On/Off Status After Power Failure",
+            "pl": ""
+        },
+        "parameterNumber": 18,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Enable or disable physical and Z-Wave control. Disable both for smart bulbs.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Disable button",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Enable button and Z-Wave",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Disable button and Z-Wave",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            }
+            ]
+        },
+        "label": {
+            "en": "Load Control (Smart Bulb Mode)",
+            "pl": ""
+        },
+        "parameterNumber": 19,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
+            "en": "Set reporting behavior for disabled physical control of the load connected to the relay (smart bulb mode).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Reports status / changes LED",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Doesn't report status / change LED",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ]
+        },
+        "label": {
+            "en": "Disabled Load Behavior",
+            "pl": ""
+        },
+        "parameterNumber": 20,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose the type of 3-way switch you want to use with this switch in a 3-way set-up.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Toggle on/off switch",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "",
+                "pl": "Momentary switch (ZAC99)"
+                },
+                "type": "value",
+                "value": 1
+            }
+            ]
+        },
+        "label": {
+            "en": "3-Way Switch Type",
+            "pl": ""
+        },
+        "parameterNumber": 21,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Enable (0) or disable (1) programming functionality on the relay button. For advanced users only, changes not recommended.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "programming enabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "programming disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ]
+        },
+        "label": {
+            "en": "Disable Button Programming",
+            "pl": ""
+        },
+        "parameterNumber": 22,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if the LED should flash whenever a parameter is adjusted on the device to confirm the change (0) or disable this feature (1).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "LED indicator flashes to confirm a setting change",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED indicator doesn't flash if a setting is changed",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ]
+        },
+        "label": {
+            "en": "Disable LED Flash On Setting Change",
+            "pl": ""
+        },
+        "parameterNumber": 23,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Enable or disable scene control functionality on the relay button for quick multi tap triggers.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "scene control enabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "scene control disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ]
+        },
+        "label": {
+            "en": "Relay Button Scene Control",
+            "pl": ""
+        },
+        "parameterNumber": 24,
+        "size": 1
+        },
+        {
+        "defaultValue": 15,
+        "description": {
+            "en": "Choose physical and Z-Wave triggers for the switch to send a status change report to the associated devices. See manual for details.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "none",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "physical tap on button only",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "physical tap on connected",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 2
+            },
+            {
+                "description": {
+                "en": "physical tap on button or connected 3-way relay",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 3
+            },
+            {
+                "description": {
+                "en": "Z-Wave command from hub",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 4
+            },
+            {
+                "description": {
+                "en": "physical tap on button or Z-Wave command from hub",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 5
+            },
+            {
+                "description": {
+                "en": "physical tap on connected 3-way switch or Z-Wave command from hub",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 6
+            },
+            {
+                "description": {
+                "en": "physical tap on button / connected 3-way switch or Z-Wave command from hub",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 7
+            },
+            {
+                "description": {
+                "en": "timer only",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 8
+            },
+            {
+                "description": {
+                "en": "physical tap on button or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 9
+            },
+            {
+                "description": {
+                "en": "physical tap on connected 3-way switch or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 10
+            },
+            {
+                "description": {
+                "en": "physical tap on button / connected 3-way switch or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 11
+            },
+            {
+                "description": {
+                "en": "Z-Wave command from hub or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 12
+            },
+            {
+                "description": {
+                "en": "physical tap on button, Z-Wave command from hub, or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 13
+            },
+            {
+                "description": {
+                "en": "physical tap on button / connected 3-way switch, Z-Wave command from hub, or timer",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 14
+            },
+            {
+                "description": {
+                "en": "all of the above",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 15
+            }
+            ]
+        },
+        "label": {
+            "en": "Association Reports",
+            "pl": ""
+        },
+        "parameterNumber": 25,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Enable scene control functionality from the momentary switch connected to ZEN32 in a 3-way installation.",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "scene control disabled commands from the remote 3-way switch disabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "scene control commands from the remote 3-way switch enabled",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ]
+        },
+        "label": {
+            "en": "Scene Control From 3-Way Switch",
+            "pl": ""
+        },
+        "parameterNumber": 26,
+        "size": 1
+        },
+        {
+        "defaultValue": 0,
+        "description": {
+            "en": "Choose if the LED should flash whenever the corresponding button is pressed (0) or disable this feature (1).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "LED indicator flashes when button is pressed",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "LED indicator doesn't flash when button is pressed",
+                "pl": ""
+                },
+                "type": "value",
+                "value": 1
+            }
+            ]
+        },
+        "label": {
+            "en": "Disable LED Flash On Button Press",
+            "pl": ""
+        },
+        "parameterNumber": 27,
+        "size": 1
+        }
+    ]
+}
