@@ -1,0 +1,1224 @@
+{
+    "description": "ZEN72 Dimmer Switch 700/800",
+    "parameters": [
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose if you want the upper paddle to turn the light on or turn the light off when tapped.",
+                "pl": "Wybierz, czy górna łopatka ma włączać, czy wyłączać światło po dotknięciu."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Up for on, down for off",
+                            "pl": "Górny przełącznik włącza światło, dolny je wyłącza"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Up for off, down for on",
+                            "pl": "Górny przełącznik wyłącza światło, dolny je włącza"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Up or down for on/off",
+                            "pl": "Dowolny przełącznik włącza/wyłącza światło"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Paddle Orientation",
+                "pl": "Orientacja przełącznika"
+            },
+            "parameterNumber": 1,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose if you want the LED indicator to turn on when the dimmer (light) is on or off, or if you want it to remain on or off at all times.",
+                "pl": "Wybierz, czy wskaźnik LED ma się włączać, gdy przełącznik (światło) jest włączony lub wyłączony, czy ma pozostać włączony lub wyłączony przez cały czas."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "LED on when switch off",
+                            "pl": "Wskaźnik LED jest włączony, gdy przełącznik jest wyłączony, wskaźnik LED jest wyłączony, gdy przełącznik jest włączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "LED on when switch on",
+                            "pl": "Wskaźnik LED włączony, gdy przycisk jest włączony, wskaźnik LED wyłączony, gdy przycisk jest wyłączony"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "LED always off",
+                            "pl": "Wskaźnik LED jest zawsze wyłączony"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "LED always on",
+                            "pl": "Wskaźnik LED jest zawsze włączony"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED Indicator",
+                "pl": "Sterowanie wskaźnikiem LED"
+            },
+            "parameterNumber": 2,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Auto-off timer will automatically turn the dimmer off after x minutes once it has been turned on.",
+                "pl": "Użyj tego parametru, aby włączyć lub wyłączyć funkcję auto wyłączenia timera (czas, po którym chcesz, aby przełącznik automatycznie wyłączył się po włączeniu)."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Timer wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto Turn-Off Timer",
+                "pl": "Timer automatycznego wyłączenia"
+            },
+            "parameterNumber": 3,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Auto-on timer will automatically turn the dimmer on after x minutes once it has been turned off.",
+                "pl": "Użyj tego parametru, aby włączyć lub wyłączyć funkcję auto włączenia timera (czas, po którym chcesz, aby przełącznik automatycznie włączył się po wyłączeniu)."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": "Timer wyłączony"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 65535,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto Turn-On Timer",
+                "pl": "Timer automatycznego włączenia"
+            },
+            "parameterNumber": 5,
+            "size": 4
+        },
+        {
+            "defaultValue": 15,
+            "description": {
+                "en": "Choose physical and Z-Wave triggers for the dimmer to send a status change report to the associated devices. See manual for details.",
+                "pl": "Wybierz, które fizyczne i Z-Wave wyzwalacze powinny skłonić przełącznik do wysłania raportu o zmianie stanu do powiązanych urządzeń."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "none",
+                            "pl": "Brak"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72 only",
+                            "pl": "Lokalny"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on connected 3-way switch only",
+                            "pl": "Przełącznik schodowy"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72 or connected 3-way switch",
+                            "pl": "Przełącznik schodowy i lokalny"
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Z-Wave command from hub",
+                            "pl": "Hub Z-Wave"
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72 or Z-Wave command from hub",
+                            "pl": "Hub Z-Wave i lokalny"
+                        },
+                        "type": "value",
+                        "value": 5
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on connected 3-way switch or Z-Wave command from hub",
+                            "pl": "Hub Z-Wave i przełącznik schowowy"
+                        },
+                        "type": "value",
+                        "value": 6
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72 / connected 3-way switch or Z-Wave command from hub",
+                            "pl": "Hub Z-Wave, przełącznik schodowy i lokalny"
+                        },
+                        "type": "value",
+                        "value": 7
+                    },
+                    {
+                        "description": {
+                            "en": "timer only",
+                            "pl": "Timer"
+                        },
+                        "type": "value",
+                        "value": 8
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72 or timer",
+                            "pl": "Timer i lokalny"
+                        },
+                        "type": "value",
+                        "value": 9
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on connected 3-way switch or timer",
+                            "pl": "Timer i przełącznik schodowy"
+                        },
+                        "type": "value",
+                        "value": 10
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72 / connected 3-way switch or timer",
+                            "pl": "Timer, przełącznik schodowy i lokalny"
+                        },
+                        "type": "value",
+                        "value": 11
+                    },
+                    {
+                        "description": {
+                            "en": "Z-Wave command from hub or timer",
+                            "pl": "Timer i hub Z-Wave"
+                        },
+                        "type": "value",
+                        "value": 12
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72, Z-Wave command from hub, or timer",
+                            "pl": "Timer, hub Z-Wave i lokalny"
+                        },
+                        "type": "value",
+                        "value": 13
+                    },
+                    {
+                        "description": {
+                            "en": "physical tap on ZEN72 / connected 3-way switch, Z-Wave command from hub, or timer",
+                            "pl": "Timer, hub Z-Wave i przełącznik schodowy"
+                        },
+                        "type": "value",
+                        "value": 14
+                    },
+                    {
+                        "description": {
+                            "en": "all of the above",
+                            "pl": "Wszystkie"
+                        },
+                        "type": "value",
+                        "value": 15
+                    }
+                ]
+            },
+            "label": {
+                "en": "Association Reports",
+                "pl": "Ustawienia asocjacji"
+            },
+            "parameterNumber": 7,
+            "size": 1
+        },
+        {
+            "defaultValue": 2,
+            "description": {
+                "en": "Set the on off status for the dimmer after power failure.",
+                "pl": "Ustawienie stanu włączenia/wyłączenia dla przełącznika po awarii zasilania."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "always off once restored",
+                            "pl": "Wymuszenie wyłączenia (niezależnie od stanu przed wyłączeniem zasilania)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "always on once restored",
+                            "pl": "Wymuszenie włączenia (niezależnie od stanu sprzed zaniku zasilania)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "remembers and restores status",
+                            "pl": "Zapamiętuje i przywraca stan włączenia/wyłączenia po zaniku zasilania"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "On/Off Status After Power Failure",
+                "pl": "Stan włączenia i wyłączenia po awarii zasilania"
+            },
+            "parameterNumber": 8,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Adjust the ramp rate ON for your dimmer when the top paddle is pressed for a smooth fade-in effect (in seconds).",
+                "pl": "Regulacja szybkości narastania sygnału włączenia ściemniacza po naciśnięciu górnego przełącznika (fizyczna szybkość narastania sygnału włączania). Wartości odpowiadają liczbie sekund potrzebnych do osiągnięcia przez ściemniacz pełnej jasności przy obsłudze ręcznej."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "instant on",
+                            "pl": "Natychmiastowe włączenie"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 99,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "s"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Physical Ramp Rate ON",
+                "pl": "Regulacja szybkości zwiększania jasności"
+            },
+            "parameterNumber": 9,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Set the minimum brightness level (in %) for your dimmer. You won’t be able to dim the light below the set value.",
+                "pl": "Ustaw minimalny poziom jasności (w %) dla ściemniacza. Nie będzie można ściemniać światła poniżej ustawionej wartości."
+            },
+            "format": {
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "%"
+            },
+            "label": {
+                "en": "Minimum Brightness",
+                "pl": "Jasność minimalna"
+            },
+            "parameterNumber": 10,
+            "size": 1
+        },
+        {
+            "defaultValue": 99,
+            "description": {
+                "en": "Set the maximum brightness level (in %) for your dimmer. You won’t be able to add brightness to the light beyond the set value.",
+                "pl": "Ustaw maksymalny poziom jasności (w %) dla ściemniacza. Nie będzie można zwiększać jasności światła powyżej ustawionej wartości."
+            },
+            "format": {
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "%"
+            },
+            "label": {
+                "en": "Maximum Brightness",
+                "pl": "Jasność maksymalna"
+            },
+            "parameterNumber": 11,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose what you'd like the dimmer to do when you double-tap the upper paddle.",
+                "pl": "Wybierz, co chcesz, aby ściemniacz robił, gdy dwukrotnie dotkniesz górnego przełącznika."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "on to full brightness",
+                            "pl": "Światło włączy się na pełną jasność"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "on to the custom brightness (from param 18)",
+                            "pl": "Światło włączy się do niestandardowego poziomu jasności ustawionego w parametrze 18"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "on to max brightness (from param 11)",
+                            "pl": "Światło włączy się na maksymalny poziom jasności ustawiony w parametrze 11"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "double tap disabled",
+                            "pl": "Podwójne stuknięcie wyłączone"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "Double Tap Up",
+                "pl": "Zachowanie przy podwójnym stuknięciu"
+            },
+            "parameterNumber": 12,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable or disable scene control functionality for quick multi tap triggers.",
+                "pl": "Włączenie lub wyłączenie funkcji sterowania sceną dla szybkiego podwójnego stuknięcia."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "scene control disabled",
+                            "pl": "Sterowanie sceną wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "scene control enabled",
+                            "pl": "Sterowanie sceną włączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Scene Control",
+                "pl": "Włączanie/wyłączanie sterowania sceną"
+            },
+            "parameterNumber": 13,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Enable or disable physical and Z-Wave on/off and dimming control. Disable both for smart bulbs.",
+                "pl": "Włącz lub wyłącz sterowanie przełącznikiem (aka wyłączenie przekaźnika). Jeśli wyłączone, będziesz mógł kontrolować podłączone światło tylko poprzez Z-Wave. Sceny i inne funkcje będą nadal dostępne poprzez łopatki."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disable paddle",
+                            "pl": "Fizyczne sterowanie przełącznikami wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Enable paddle and Z-Wave",
+                            "pl": "Fizyczne sterowanie przełącznikami włączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Disable paddle and Z-Wave",
+                            "pl": "Sterowanie za pomocą fizycznego przełącznika i Z-Wave wyłączone"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Load Control (Smart Bulb Mode)",
+                "pl": "Tryb Inteligentnej Żarówki: Włącz/wyłącz / kontrola Z-Wave"
+            },
+            "parameterNumber": 15,
+            "size": 1
+        },
+        {
+            "defaultValue": 5,
+            "description": {
+                "en": "Set the number of seconds it takes to get from 0% to 100% brightness when pressing and holding the paddle (physical dimming).",
+                "pl": "Ustaw czas potrzebny na przejście od 0% do 100% jasności po naciśnięciu i przytrzymaniu przełącznika (fizyczne ściemnianie). Liczba wpisana jako wartość odpowiada liczbie sekund."
+            },
+            "format": {
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "s"
+            },
+            "label": {
+                "en": "Dimming Speed",
+                "pl": "Szybkość ściemniania fizycznego"
+            },
+            "parameterNumber": 16,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Set the custom brightness level (or leave the last brightness level) for single tap and double tap (see params 12 and 25).",
+                "pl": "Ustawienie własnego poziomu jasności (zamiast ostatnio ustawionego poziomu jasności), który ma być włączony po pojedynczym lub podwójnym dotknięciu górnego przełącznika ."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "last brightness level",
+                            "pl": "Ostatni poziom jasności"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 99,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "%"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Physical Custom Brightness On",
+                "pl": "Włączenie niestandardowego poziomu jasności"
+            },
+            "parameterNumber": 18,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose the type of 3-way switch you want to use with this dimmer in a 3-way set-up.",
+                "pl": "Wybierz typ przełącznika schodowego, który chcesz użyć z tym ściemniaczem w konfiguracji schodowej. Zmiana tego ustawienia może pozwolić na sterowanie jasnością i ściemnianiem światła z poziomu obu przełączników. Użyj zwykłego przełącznika chwilowego, jeśli wartość jest ustawiona na 2."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Toggle on/off switch",
+                            "pl": "Zwykły mechaniczny schodowy włącznik/wyłącznik, użyj podłączonego schodowego przełącznika, aby wyłączyć lub włączyć światło do ostatniego poziomu jasności, ściemnianie dostępne tylko z poziomu ściemniacza Zooz Z-Wave i z centrali (lub poprzez sterowanie głosem, jeśli inteligentny głośnik jest zintegrowany z centralą Z-Wave)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Toggle switch with dimming mode",
+                            "pl": "Zwykły mechaniczny przełącznik schodowy, dotknij przełączniki raz, aby zmienić stan (światło włączone lub wyłączone), dotknij przełączniki szybko dwa razy, aby włączyć światło do pełnej jasności, dotknij przełączniki szybko 3 razy, aby włączyć sekwencję ściemniania (światło zacznie ściemniać w górę i w dół w pętli) dotknij przełącznika ponownie, aby ustawić wybrany poziom jasności"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Momentary switch (ZAC99)",
+                            "pl": "Przełącznik chwilowy, kliknij raz, aby zmienić stan (światło włączone lub wyłączone), kliknij dwa razy szybko, aby włączyć światło do pełnej jasności, naciśnij i przytrzymaj, aby dostosować jasność (kolejno ściemniaj w górę / ściemniaj w dół)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Momentary switch (ZAC99) with smart sequence",
+                            "pl": "Przełącznik chwilowy, kliknij raz, aby zmienić stan (światło włączone lub wyłączone), kliknij dwa razy szybko, aby włączyć światło do pełnej jasności, naciśnij i przytrzymaj, aby dostosować jasność (przyciemnij w górę / przyciemnij w dół w kolejności, ale zawsze zmniejsz jasność po podwójnym kliknięciu)"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "3-Way Switch Type",
+                "pl": "Typ przełącznika schodowego"
+            },
+            "parameterNumber": 19,
+            "size": 1
+        },
+        {
+            "defaultValue": 2,
+            "description": {
+                "en": "Choose how you'd like the dimmer to report when paddles are tapped and held and physical / Z-Wave control is enabled or disabled.",
+                "pl": "Wybierz, w jaki sposób ściemniacz ma informować o dotknięciu i przytrzymaniu łopatek oraz włączeniu lub wyłączeniu sterowania fizycznego/Z-Wave."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Reports each brightness level if physical and Z-Wave control disabled (reports final level if physical and Z-Wave control enabled)",
+                            "pl": "Sterowanie Z-Wave: Raport Multilevel (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (krótkie naciśnięcie): Raport Basic (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (długie naciśnięcie i włączenie przekaźnika): Raport Basic (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (długie naciśnięcie i wyłączenie przekaźnika): Raport Multilevel (każdy poziom zostanie zgłoszony)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Always reports final brightness level only (Z-Wave multilevel reports, physical basic reports)",
+                            "pl": "Sterowanie Z-Wave: Raport Multilevel (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (krótkie naciśnięcie): Raport Basic (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (długie naciśnięcie i włączenie LUB wyłączenie przekaźnika): Raport Basic (bez każdego poziomu, tylko poziom końcowy)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Reports each brightness level if physical and Z-Wave control disabled (reports final level if physical and Z-Wave control enabled), all multilevel reports",
+                            "pl": "Sterowanie Z-Wave: Raport Multilevel (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (krótkie naciśnięcie): Raport Multilevel (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (długie naciśnięcie i włączenie przekaźnika): Raport Multilevel (bez każdego poziomu, tylko poziom końcowy) Sterowanie ręczne (długie naciśnięcie i wyłączenie przekaźnika): Raport Multilevel (każdy poziom będzie raportowany)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "Multilevel Dimming Reports",
+                "pl": "Raporty ściemniacza"
+            },
+            "parameterNumber": 20,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Set reporting behavior for disabled physical control of the load connected to the dimmer (smart bulb mode).",
+                "pl": "Ustaw zachowanie raportowania dla wyłączonej kontroli fizycznej."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Reports status / changes LED",
+                            "pl": "Przełącznik zgłasza stan włączenia/wyłączenia i zmienia stan wskaźnika LED, nawet jeśli sterowanie fizyczne i Z-Wave jest wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Doesn't report status / change LED",
+                            "pl": "Przełącznik nie zgłasza stanu włączenia/wyłączenia ani nie zmienia stanu wskaźnika LED, gdy sterowanie fizyczne (i Z-Wave) jest wyłączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Reporting for Disabled Relay: Smart Bulb Mode",
+                "pl": "Raportowanie dla wyłączonego przekaźnika: Tryb inteligentnej żarówki"
+            },
+            "parameterNumber": 21,
+            "size": 1
+        },
+        {
+            "defaultValue": 20,
+            "description": {
+                "en": "Set the brightness level the dimmer will turn on to when off and when the lower paddle is held DOWN for 2.5-3 seconds.",
+                "pl": "Ustawienie poziomu jasności, na jaki włączy się ściemniacz w stanie wyłączonym i gdy dolny przełącznik zostanie przytrzymany przez sekundę w dół."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "feature disabled",
+                            "pl": "Funkcja wyłączona"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 99,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "%"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Night Light",
+                "pl": "Tryb oświetlenia nocnego"
+            },
+            "parameterNumber": 22,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Choose the color of the LED indicator. 0 * white, 1 * blue, 2 * green, 3 * red.",
+                "pl": "Wybierz kolor wskaźnika LED."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "white",
+                            "pl": "Biały"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Blue",
+                            "pl": "Niebieski"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Green",
+                            "pl": "Zielony"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Red",
+                            "pl": "Czerwony"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED Indicator Color",
+                "pl": "Kolor wskaźnika LED"
+            },
+            "parameterNumber": 23,
+            "size": 1
+        },
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Choose the LED indicator's brightness level. 0 * bright (100%); 1 * medium (60%); 2 * low (30%).",
+                "pl": "Wybierz poziom jasności wskaźnika LED."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Bright (100%)",
+                            "pl": "Jasny (100%)"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Medium (60%)",
+                            "pl": "Średni (60%)"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Low (30%)",
+                            "pl": "Niski (30%)"
+                        },
+                        "type": "value",
+                        "value": 2
+                    }
+                ]
+            },
+            "label": {
+                "en": "LED Indicator Brightness",
+                "pl": "Poziom jasności wskaźnika LED"
+            },
+            "parameterNumber": 24,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose what you'd like the dimmer to do when you tap the upper paddle once.",
+                "pl": "Wybierz, co chcesz, aby ściemniacz robił, gdy raz dotkniesz górnego przełącznika."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "on to the last brightness level",
+                            "pl": "Światło włączy się na ostatni poziom jasności"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "on to the custom brightness (from param 18)",
+                            "pl": "Światło włączy się na niestandardowy poziom jasności ustawiony w parametrze 18"
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "on to max brightness (from param 11)",
+                            "pl": "Światło włączy się na maksymalny poziom jasności ustawiony w parametrze 11"
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "on to full brightness",
+                            "pl": "Światło włączy się na pełną jasność"
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "Single Tap Up",
+                "pl": "Zachowanie przy pojedynczym stuknięciu"
+            },
+            "parameterNumber": 25,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable (0) or disable (1) programming functionality on the dimmer paddles. For advanced users only, changes not recommended.",
+                "pl": "Włączenie lub wyłączenie funkcjonalności programowania na łopatkach przełącznika. Jeśli to ustawienie jest wyłączone, włączenie, wykluczenie, tryb inteligentnej żarówki nie będą już działać, gdy łopatki przełącznika są aktywowane (przywracanie ustawień fabrycznych i sterowanie scenami będą nadal działać) - oznacza to, że można teraz używać wyzwalaczy potrójnego dotknięcia na przełączniku do scen i zdalnego sterowania innymi urządzeniami."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "programming enabled",
+                            "pl": "Programowanie włączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "programming disabled",
+                            "pl": "Programowanie wyłączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Disable Paddle Programming",
+                "pl": "Włączenie lub wyłączenie funkcji programowania na przełącznikach ściemniaczy"
+            },
+            "parameterNumber": 26,
+            "size": 1
+        },
+        {
+            "defaultValue": 2,
+            "description": {
+                "en": "Adjust the ramp rate OFF for your dimmer when the bottom paddle is pressed for a smooth fade-out effect (in seconds).",
+                "pl": "Regulacja szybkości narastania sygnału wyłączenia ściemniacza po naciśnięciu dolnego przełącznika (fizyczna szybkość narastania sygnału wyłączania). Wartości odpowiadają liczbie sekund potrzebnych do wyłączenia ściemniacza przy obsłudze ręcznej."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "instant off",
+                            "pl": "Natychmiastowe wyłączenie"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 99,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "s"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Physical Ramp Rate OFF",
+                "pl": "Sterowanie szybkością narastania"
+            },
+            "parameterNumber": 27,
+            "size": 1
+        },
+        {
+            "defaultValue": 255,
+            "description": {
+                "en": "Adjust the ramp rate ON for your dimmer when controlled with Z-Wave for a smooth fade-in effect (in seconds).",
+                "pl": "Dostosuj szybkość włączania ściemniacza, gdy wysyłane jest polecenie Z-Wave w celu włączenia ściemniacza (Z-Wave ramp rate on). Wartości odpowiadają liczbie sekund potrzebnych ściemniaczowi do osiągnięcia pełnej jasności, gdy jest obsługiwany przez Z-Wave."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "instant on",
+                            "pl": "Natychmiastowe włączenie"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "match physical",
+                            "pl": "Dopasowanie do fizycznego przycisku"
+                        },
+                        "type": "value",
+                        "value": 255
+                    },
+                    {
+                        "max": 99,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "s"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Z-Wave Ramp Rate ON",
+                "pl": "Sterowanie szybkością włączania"
+            },
+            "parameterNumber": 28,
+            "size": 1,
+            "unsigned": true
+        },
+        {
+            "defaultValue": 255,
+            "description": {
+                "en": "Adjust the ramp rate OFF for your dimmer when controlled with Z-Wave for a smooth fade-out effect (in seconds).",
+                "pl": "Dostosuj szybkość narastania wyłączania dla ściemniacza, gdy wysyłana jest komenda Z-Wave, aby wyłączyć ściemniacz (Z-Wave ramp rate off). Wartości odpowiadają liczbie sekund potrzebnych do wyłączenia ściemniacza przy obsłudze przez Z-Wave."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "instant off",
+                            "pl": "Natychmiastowe wyłączenie"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "match physical",
+                            "pl": "Dopasowanie do fizycznego przycisku"
+                        },
+                        "type": "value",
+                        "value": 255
+                    },
+                    {
+                        "max": 99,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "s"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Z-Wave Ramp Rate OFF",
+                "pl": "Sterowanie szybkością wyłączania"
+            },
+            "parameterNumber": 29,
+            "size": 1,
+            "unsigned": true
+        },
+        {
+            "defaultValue": 5,
+            "description": {
+                "en": "Set the number of seconds it takes to get from 0% to 100% brightness on dimmers and smart bulbs directly associated with ZEN72 in Groups 3 and 4.",
+                "pl": "Ustaw czas potrzebny do uzyskania od 0% do 100% jasności na ściemniaczach i inteligentnych żarówkach bezpośrednio powiązanych z Twoim ściemniaczem w grupach 3 i 4 po naciśnięciu i przytrzymaniu przełącznika (fizyczne ściemnianie) . Liczba wprowadzona jako wartość odpowiada liczbie sekund."
+            },
+            "format": {
+                "max": 99,
+                "min": 1,
+                "scale": 1,
+                "step": 1,
+                "type": "range",
+                "unit": "s"
+            },
+            "label": {
+                "en": "Remote Z-Wave Dimming Duration",
+                "pl": "Zdalny czas trwania przyciemniania Z-Wave (wielopoziomowe polecenia dla grupy 3 i 4)"
+            },
+            "parameterNumber": 30,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable scene control functionality from the momentary switch connected to ZEN72 in a 3-way installation.",
+                "pl": "Umożliwia sterowanie scenami za pomocą przełącznika chwilowego w instalacji schodowej."
+
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "scene control disabled commands from the remote 3-way switch disabled",
+                            "pl": "Polecenia sterowania sceną ze zdalnego przełącznika schodowego wyłączone"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "scene control commands from the remote 3-way switch enabled",
+                            "pl": "Polecenia sterowania sceną ze zdalnego przełącznika schodowego włączone"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Scene Control From Remote 3-Way Switch",
+                "pl": "Umożliwienie sterowanie scenami za pomocą przełącznika chwilowego w instalacji schodowej"
+            },
+            "parameterNumber": 31,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Choose if the LED should flash whenever a parameter is adjusted on the device to confirm the change (0) or disable this feature (1).",
+                "pl": "Włączanie/wyłączanie wskaźnika LED dla zmian ustawień. Wybierz, czy chcesz, aby wskaźniki LED migały za każdym razem, gdy parametr jest regulowany na urządzeniu w celu potwierdzenia zmiany. Wyłącz tę funkcję, jeśli używasz wskaźników LED."
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "LED indicator flashes to confirm a setting change",
+                            "pl": "Włączone migania diody LED"
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator doesn't flash if a setting is changed",
+                            "pl": "Wyłączone migania diody LED"
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Disable LED Indicator Flash On Setting Change",
+                "pl": "Wyłączenie migania diody LED przy zmianie ustawienia"
+            },
+            "parameterNumber": 32,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Convert the dimmer to an on off switch. When enabled, the dimmer will behave as a switch without the ability to dim.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "LED indicator flashes to confirm a setting change",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "LED indicator doesn't flash if a setting is changed",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    }
+                ]
+            },
+            "label": {
+                "en": "On Off Switch Mode",
+                "pl": ""
+            },
+            "parameterNumber": 33,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Set custom brightness (or leave last brightness) for Basic Set ON commands when the ZEN72 is triggered by another device in direct association.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "last brightness level",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "max": 99,
+                        "min": 1,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "%"
+                    }
+                ]
+            },
+            "label": {
+                "en": "Basic Set Custom Brightness On",
+                "pl": ""
+            },
+            "parameterNumber": 34,
+            "size": 1
+        }
+    ]
+}
