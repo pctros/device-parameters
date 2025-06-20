@@ -750,6 +750,48 @@
         {
         "defaultValue": 1,
         "description": {
+            "en": "Choose button 3 LED indicator's brightness level. 0: bright (100%); 1: medium (60%); 2: low (30%).",
+            "pl": ""
+        },
+        "format": {
+            "type": "enumerated",
+            "values": [
+            {
+                "description": {
+                "en": "Bright (100%)",
+                "pl": "Jasny (100%)"
+                },
+                "type": "value",
+                "value": 0
+            },
+            {
+                "description": {
+                "en": "Medium (60%)",
+                "pl": "Średni (60%)"
+                },
+                "type": "value",
+                "value": 1
+            },
+            {
+                "description": {
+                "en": "Low (30%)",
+                "pl": "Niski (30%)"
+                },
+                "type": "value",
+                "value": 2
+            }
+            ]
+        },
+        "label": {
+            "en": "LED brightness for button 3",
+            "pl": ""
+        },
+        "parameterNumber": 14,
+        "size": 1
+        },
+        {
+        "defaultValue": 1,
+        "description": {
             "en": "Choose button 4 LED indicator's brightness level. 0: bright (100%); 1: medium (60%); 2: low (30%).",
             "pl": ""
         },
