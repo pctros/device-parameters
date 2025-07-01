@@ -319,7 +319,7 @@
             ]
         },
         "label": {
-            "en": "LED always off",
+            "en": "LED Color For Relay Button",
             "pl": ""
         },
         "parameterNumber": 6,
