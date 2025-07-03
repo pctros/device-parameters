@@ -1,5 +1,5 @@
 {
-    "description": "ZEN71 ON/OFF SWITCH",
+    "description": "ZEN71 On/Off Switch",
     "parameters": [
         {
             "defaultValue": 0,
