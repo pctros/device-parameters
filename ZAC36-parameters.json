@@ -1,0 +1,1153 @@
+{
+    "description": {
+        "en": "ZAC36 Water valve actuator",
+        "pl": ""
+    },
+    "parameters": [
+        {
+            "parameterNumber": 17,
+            "label": {
+                "en": "Command and Reporting Behavior",
+                "pl": ""
+            },
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "recommendedValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "\"on\" report / command for closed, \"off\" report / command for open",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "\"off\" report / command for closed, \"on\" report / command for open",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 18,
+            "label": {
+                "en": "Association Group 2 Close Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 2 when parameter 17 is set to value 1 and the valve is closing.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 2 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 19,
+            "label": {
+                "en": "Association Group 2 Open Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 2 when parameter 17 is set to value 1 and the valve is opening.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 2 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 33,
+            "label": {
+                "en": "Temperature Reporting Unit",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the temperature reporting unit. 1 - Celsius, 2 - Fahrenheit.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "temperature reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Celsius",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Fahrenheit",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 34,
+            "label": {
+                "en": "Temperature Reporting Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the threshold for temperature reporting in degree changes. Set value to 0 to disable temperature reports based on threshold.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 1,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 511,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "degree"
+            }
+        },
+        {
+            "parameterNumber": 35,
+            "label": {
+                "en": "Temperature Offset",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the temperature reporting offset. Value 256 = no offset. Refer to documentation for more details. Expert users only.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 256,
+            "format": {
+                "type": "range",
+                "min": 256,
+                "max": 4607,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "degree"
+            }
+        },
+        {
+            "parameterNumber": 36,
+            "label": {
+                "en": "Overheat Alarm Trigger",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the overheat alarm trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 360,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 511,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "°F"
+            }
+        },
+        {
+            "parameterNumber": 37,
+            "label": {
+                "en": "Overheat Alarm Clear Trigger",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the overheat alarm clear trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 342,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 511,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "°F"
+            }
+        },
+        {
+            "parameterNumber": 38,
+            "label": {
+                "en": "Association Group 4 Overheat Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 4 when an overheat alarm occurs (set in parameter 36).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 4 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 39,
+            "label": {
+                "en": "Association Group 4 Overheat Cleared",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 4 when an overheat alarm is cleared (set in parameter 37).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 4 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 40,
+            "label": {
+                "en": "Freeze Alarm Trigger",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the freeze alarm trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 288,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 511,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "°F"
+            }
+        },
+        {
+            "parameterNumber": 41,
+            "label": {
+                "en": "Freeze Alarm Clear Trigger",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the freeze alarm clear trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 292,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 511,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "°F"
+            },
+            "unsigned": true
+        },
+        {
+            "parameterNumber": 42,
+            "label": {
+                "en": "Freeze Alarm Mode",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose if the ZAC36 operates during a freeze alarm. If value is set to 0, it won't respond to Z-Wave or manual triggers until cleared.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Operation disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Operation enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 43,
+            "label": {
+                "en": "Association Group 5 Freeze Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 5 when a freeze alarm occurs (set in parameter 40).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 5 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 44,
+            "label": {
+                "en": "Association Group 5 Freeze Cleared",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 5 when a freeze alarm is cleared (set in parameter 41).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 5 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 45,
+            "label": {
+                "en": "Temperature Reporting Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the minimum reporting interval for temperature in minutes. Values 1-60 will send a report regardless of the other settings.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 15,
+            "format": {
+                "type": "range",
+                "min": 1,
+                "max": 60,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "minutes"
+            }
+        },
+        {
+            "parameterNumber": 49,
+            "label": {
+                "en": "Association Group 3 Leak Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 3 when the connected probe detects a leak.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 3 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 50,
+            "label": {
+                "en": "Association Group 3 Leak Cleared",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide which report is sent to Group 3 when the connected probe clears the leak alarm.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "reports to Group 3 disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Basic Set on",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Basic Set off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 51,
+            "label": {
+                "en": "Disable Leak Probe",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable (value 1) or disable (value 0) reporting and the auto shut-off triggering from the connected wired leak probe.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Leak probe reports and trigger disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Leak probe reports and trigger enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 52,
+            "label": {
+                "en": "Leak Cleared Report Delay",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the number of seconds the device should wait after the probe no longer detects a leak before sending a leak cleared report.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 10,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 60,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "seconds"
+            }
+        },
+        {
+            "parameterNumber": 65,
+            "label": {
+                "en": "Disable Sound",
+                "pl": ""
+            },
+            "description": {
+                "en": "",
+                "pl": "Enable (value 1) or disable (value 0) the sound (beep) feedback and notifications from the device."
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Sound notifications disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Sound notifications enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 66,
+            "label": {
+                "en": "LED Indicator Brightness",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide how bright you'd like the LED indicator to be on your actuator. Set value to 0 to disabled the LED indicator.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 80,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "LED indicator disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 99,
+                        "step": 1,
+                        "scale": 1.0,
+                        "unit": "%"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 67,
+            "label": {
+                "en": "Enable Z-Wave Button Lock",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable (value 1) or disable (value 0) the Z-Wave button lock function. Value 1 recommended for outdoor installation.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Z-Wave button lock disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Z-Wave button lock enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 81,
+            "label": {
+                "en": "Disable Open / Close Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "",
+                "pl": "Disable (value 0) or enable (value 1) open / close notifications from the water valve actuator to the hub."
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Open/close reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Open/close reports enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 82,
+            "label": {
+                "en": "Enable Overheat Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable (value 0) or enable (value 1) overheat notifications from the water valve actuator to the hub.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": " Overheat reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Overheat reports enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 83,
+            "label": {
+                "en": "Disable Freeze Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable (value 0) or enable (value 1) freeze notifications from the water valve actuator to the hub.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Freeze reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Freeze reports enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 84,
+            "label": {
+                "en": "Disable Leak Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable (value 0) or enable (value 1) leak notifications from the wired probe to the hub.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Leak reports disabled",
+                            "pl": "Leak reports enabled"
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 85,
+            "label": {
+                "en": "Disable AC Power Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable (value 0) or enable (value 1) AC power notifications from the wired probe to the hub.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Power reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Power reports enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },        
+        {
+            "parameterNumber": 86,
+            "label": {
+                "en": "Disable Battery Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable (value 0) or enable (value 1) battery notifications from the optional back-up battery (sold separately).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Battery reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Battery reports enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 97,
+            "label": {
+                "en": "Disable Auto Test Mode",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide when the actuator runs auto test mode. It will periodically turn 1/8 to self-test. Set value to 0 to disable auto test mode.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 3,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Battery reports enable",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 3,
+                        "description": {
+                            "en": "",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 98,
+            "label": {
+                "en": "Auto Test Mode Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide how often you'd like the actuator to perform the auto test set in parameter 97. Set values in days.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 14,
+            "format": {
+                "type": "range",
+                "min": 1,
+                "max": 30,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "days"
+            }
+        },
+        {
+            "parameterNumber": 99,
+            "label": {
+                "en": "Manual Calibration Open Offset",
+                "pl": ""
+            },
+            "description": {
+                "en": "If the valve doesn't fully open after Titan's manual calibration, adjust the open angle offset (%) to correct it.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 9,
+            "format": {
+                "type": "range",
+                "min": 1,
+                "max": 10,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "%"
+            }
+        },
+        {
+            "parameterNumber": 100,
+            "label": {
+                "en": "Manual Calibration Closed Offset",
+                "pl": ""
+            },
+            "description": {
+                "en": "If the valve doesn't fully close after Titan's manual calibration, adjust the closed angle offset (%) to correct it.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 4,
+            "format": {
+                "type": "range",
+                "min": 1,
+                "max": 10,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "%"
+            }
+        },
+        {
+            "parameterNumber": 113,
+            "label": {
+                "en": "Battery Reporting Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "",
+                "pl": "Set the threshold for battery reporting in % changes."
+            },
+            "size": 1,
+            "defaultValue": 10,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "%"
+            }
+        },
+        {
+            "parameterNumber": 114,
+            "label": {
+                "en": "Low Battery Report",
+                "pl": "Which % level should the device report low battery to the hub."
+            },
+            "description": {
+                "en": "",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 30,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "%"
+            }
+        },        
+        {
+            "parameterNumber": 115,
+            "label": {
+                "en": "Disable Auto-close With Low Battery",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable (value 1) or disable (value 0) the auto-close function when a low battery alert is triggered. ",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable auto-close with low battery alert",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable auto-close with low battery alert",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
