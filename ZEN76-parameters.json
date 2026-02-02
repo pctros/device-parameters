@@ -1,0 +1,741 @@
+{
+  "description": "ZEN76 On/Off Switch",
+  "parameters": [
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Choose if you want the upper paddle to turn the light on or turn the light off when tapped.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "Up for on, down for off",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "Up for off, down for on",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "Up or down for on/off",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          }
+        ]
+      },
+      "label": {
+        "en": "Paddle Orientation",
+        "pl": ""
+      },
+      "parameterNumber": 1,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Choose if you want the LED indicator to turn on when the switch (light) is on or off, or if you want it to remain on or off at all times.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "LED on when switch off",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "LED on when switch on",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "LED always off",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          },
+          {
+            "description": {
+              "en": "LED always on",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 3
+          }
+        ]
+      },
+      "label": {
+        "en": "LED Indicator",
+        "pl": ""
+      },
+      "parameterNumber": 2,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Auto-off timer will automatically turn the switch off after x minutes once it has been turned on.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "Timer disabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "max": 65535,
+            "min": 1,
+            "scale": 1,
+            "step": 1,
+            "type": "range",
+            "unit": "min"
+          }
+        ]
+      },
+      "label": {
+        "en": "Auto Turn-Off Timer",
+        "pl": ""
+      },
+      "parameterNumber": 3,
+      "size": 4
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Auto-on timer will automatically turn the switch on after x minutes once it has been turned off.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "Timer disabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "max": 65535,
+            "min": 1,
+            "scale": 1,
+            "step": 1,
+            "type": "range",
+            "unit": "min"
+          }
+        ]
+      },
+      "label": {
+        "en": "Auto Turn-On Timer",
+        "pl": ""
+      },
+      "parameterNumber": 5,
+      "size": 4
+    },
+    {
+      "defaultValue": 15,
+      "description": {
+        "en": "Choose physical and Z-Wave triggers for the switch to send a status change report to the associated devices. See manual for details.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "none",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76 only",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "physical tap on connected 3-way switch only",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76 or connected 3-way switch",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 3
+          },
+          {
+            "description": {
+              "en": "Z-Wave command from hub",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 4
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76 or Z-Wave command from hub",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 5
+          },
+          {
+            "description": {
+              "en": "physical tap on connected 3-way switch or Z-Wave command from hub",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 6
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76 / connected 3-way switch or Z-Wave command from hub",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 7
+          },
+          {
+            "description": {
+              "en": "timer only",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 8
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76 or timer",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 9
+          },
+          {
+            "description": {
+              "en": "physical tap on connected 3-way switch or timer",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 10
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76 / connected 3-way switch or timer",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 11
+          },
+          {
+            "description": {
+              "en": "Z-Wave command from hub or timer",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 12
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76, Z-Wave command from hub, or timer",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 13
+          },
+          {
+            "description": {
+              "en": "physical tap on ZEN76 / connected 3-way switch, Z-Wave command from hub, or timer",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 14
+          },
+          {
+            "description": {
+              "en": "all of the above",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 15
+          }
+        ]
+      },
+      "label": {
+        "en": "Association Reports",
+        "pl": ""
+      },
+      "parameterNumber": 7,
+      "size": 1
+    },
+    {
+      "defaultValue": 2,
+      "description": {
+        "en": "Set the on off status for the switch after power failure.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "always off once restored",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "always on once restored",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "remembers and restores status",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          }
+        ]
+      },
+      "label": {
+        "en": "On/Off Status After Power Failure",
+        "pl": ""
+      },
+      "parameterNumber": 8,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Enable or disable scene control functionality for quick double tap triggers.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "scene control disabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "scene control enabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          }
+        ]
+      },
+      "label": {
+        "en": "Scene Control",
+        "pl": ""
+      },
+      "parameterNumber": 10,
+      "size": 1
+    },
+    {
+      "defaultValue": 1,
+      "description": {
+        "en": "Enable or disable physical and Z-Wave on/off control. Disable both for smart bulbs.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "Disable paddle",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "Enable paddle and Z-Wave",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "Disable paddle and Z-Wave",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          }
+        ]
+      },
+      "label": {
+        "en": "Relay Control (Smart Bulb Mode)",
+        "pl": ""
+      },
+      "parameterNumber": 12,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Set reporting behavior for disabled physical control of the relay.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "Reports status / changes LED",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "Doesn't report status / change LED",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          }
+        ]
+      },
+      "label": {
+        "en": "Disabled Relay Behavior",
+        "pl": ""
+      },
+      "parameterNumber": 13,
+      "size": 1
+    },
+    {
+      "defaultValue": 1,
+      "description": {
+        "en": "Choose the color of the LED indicator. 0 \u2013 white, 1 \u2013 blue, 2 \u2013 green, 3 \u2013 red.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "white",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "blue",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "green",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          },
+          {
+            "description": {
+              "en": "red",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 3
+          }
+        ]
+      },
+      "label": {
+        "en": "LED Indicator Color",
+        "pl": ""
+      },
+      "parameterNumber": 14,
+      "size": 1
+    },
+    {
+      "defaultValue": 1,
+      "description": {
+        "en": "Choose the LED indicator's brightness level. 0 \u2013 bright (100%); 1 \u2013 medium (60%); 2 \u2013 low (30%).",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "bright (100%)",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "medium (60%)",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "low (30%)",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          }
+        ]
+      },
+      "label": {
+        "en": "LED Indicator Brightness",
+        "pl": ""
+      },
+      "parameterNumber": 15,
+      "size": 1
+    },
+    {
+      "defaultValue": 1,
+      "description": {
+        "en": " Choose how the switch reports its status back to the hub: binary switch for Z-Wave and basic set for physical (0) or binary switch for both (1).",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "Binary switch report for Z-Wave control, basic set report for paddle control",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "binary switch report for both Z-Wave and paddle control",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          }
+        ]
+      },
+      "label": {
+        "en": "Status Report Type",
+        "pl": ""
+      },
+      "parameterNumber": 16,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Enable (0) or disable (1) programming functionality on the switch paddles. For advanced users only, changes not recommended.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "programming enabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "programming disabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          }
+        ]
+      },
+      "label": {
+        "en": "Disable Paddle Programming",
+        "pl": ""
+      },
+      "parameterNumber": 17,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Choose if the LED should flash whenever a parameter is adjusted on the device to confirm the change (0) or disable this feature (1).",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "LED indicator flashes to confirm a setting change",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          }
+        ]
+      },
+      "label": {
+        "en": "Disable LED Indicator Flash On Setting Change",
+        "pl": ""
+      },
+      "parameterNumber": 18,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Disable multi-tap scene control so that only single taps report via central scene.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "multi-tap for scene control disabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "scene control enabled",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          }
+        ]
+      },
+      "label": {
+        "en": "Scene Control Multi-Tap",
+        "pl": ""
+      },
+      "parameterNumber": 19,
+      "size": 1
+    },
+    {
+      "defaultValue": 0,
+      "description": {
+        "en": "Choose the color of the LED indicator in opposite switch state (instead of off). 0 -  off, 1 - white, 2 - blue, 3 - green, 4 - red.",
+        "pl": ""
+      },
+      "format": {
+        "type": "enumerated",
+        "values": [
+          {
+            "description": {
+              "en": "off",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 0
+          },
+          {
+            "description": {
+              "en": "white",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 1
+          },
+          {
+            "description": {
+              "en": "blue",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 2
+          },
+          {
+            "description": {
+              "en": "green",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 3
+          },
+          {
+            "description": {
+              "en": "red",
+              "pl": ""
+            },
+            "type": "value",
+            "value": 4
+          }
+        ]
+      },
+      "label": {
+        "en": "LED Indicator Multi-Color",
+        "pl": ""
+      },
+      "parameterNumber": 20,
+      "size": 1
+    }
+  ]
+}
