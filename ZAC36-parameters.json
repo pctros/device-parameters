@@ -11,7 +11,7 @@
                 "pl": ""
             },
             "description": {
-                "en": "",
+                "en": "Decide which Z-Wave commands and reports you'd like to use to display when the device is open or closed.",
                 "pl": ""
             },
             "size": 1,
@@ -809,7 +809,7 @@
                         "type": "value",
                         "value": 0,
                         "description": {
-                            "en": " Overheat reports disabled",
+                            "en": "Overheat reports disabled",
                             "pl": ""
                         }
                     },
@@ -878,14 +878,14 @@
                         "value": 0,
                         "description": {
                             "en": "Leak reports disabled",
-                            "pl": "Leak reports enabled"
+                            "pl": ""
                         }
                     },
                     {
                         "type": "value",
                         "value": 1,
                         "description": {
-                            "en": "",
+                            "en": "Leak reports enabled",
                             "pl": ""
                         }
                     }
@@ -979,7 +979,7 @@
                         "type": "value",
                         "value": 0,
                         "description": {
-                            "en": "",
+                            "en": "Auto test disabled",
                             "pl": ""
                         }
                     },
@@ -987,7 +987,7 @@
                         "type": "value",
                         "value": 1,
                         "description": {
-                            "en": "Battery reports enable",
+                            "en": "Auto test enabled only if excluded from the hub",
                             "pl": ""
                         }
                     },
@@ -995,7 +995,7 @@
                         "type": "value",
                         "value": 2,
                         "description": {
-                            "en": "",
+                            "en": "Auto test enabled only if included to the hub",
                             "pl": ""
                         }
                     },
@@ -1003,7 +1003,7 @@
                         "type": "value",
                         "value": 3,
                         "description": {
-                            "en": "",
+                            "en": "Auto test enabled",
                             "pl": ""
                         }
                     }
