@@ -1,8 +1,5 @@
 {
-    "description": {
-        "en": "ZAC36 Water valve actuator",
-        "pl": ""
-    },
+    "description":"ZAC36 Water valve actuator",
     "parameters": [
         {
             "parameterNumber": 17,
