@@ -169,7 +169,7 @@
                 "pl": ""
             },
             "description": {
-                "en": "Set the threshold for temperature reporting in degree changes. Set value to 0 to disable temperature reports based on threshold.",
+                "en": "Set the threshold for temperature reporting in degree changes (choose appropriate value range for Celsius or Fahrenheit that matches the value in parameter 33). Set value to 0 to disable temperature reports based on threshold. 0 / 256 - Temperature reporting based on threshold disabled (reports based on frequency setting only) 1-255 degrees set in Celsius 257-511 degrees set in Fahrenheit (257 = 1F, 258 = 2F, etc)",
                 "pl": ""
             },
             "size": 2,
@@ -190,7 +190,7 @@
                 "pl": ""
             },
             "description": {
-                "en": "Set the temperature reporting offset. Value 256 = no offset. Refer to documentation for more details. Expert users only.",
+                "en": "Set the temperature reporting offset. Use values 256 - 511 for positive offset where 256 stands for 0 degrees (no offset) and 511 stands for +255 degrees, simply add the offset digit to 256 to come up with the correct value. For example +5 degrees is value 261 (256 + 5) and +10 degrees is value 266 (256 + 10). Use values 4352 - 4607 for negative offset where 4357 stands for 0 degrees (no offset) and 4607 stands for -255 degrees, simply add (do NOT subtract) the offset digit to 4352 to come up with the correct value. For example -5 degrees is value 4357 (4352 + 5) and -10 degrees is value 4362 (4352 + 10).",
                 "pl": ""
             },
             "size": 2,
@@ -211,7 +211,7 @@
                 "pl": ""
             },
             "description": {
-                "en": "Set the overheat alarm trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
+                "en": "Set the overheat alarm trigger value (choose appropriate value range for Celsius or Fahrenheit that matches the value in parameter 33). Once the device detects temperature at the set value or higher, it will send a heat alert to the hub.\n\n0-255 degrees set in Celsius\n256-511 degrees set in Fahrenheit (256 = 1F, 257 = 2F, etc)",
                 "pl": ""
             },
             "size": 2,
@@ -222,7 +222,7 @@
                 "max": 511,
                 "step": 1,
                 "scale": 1.0,
-                "unit": "°F"
+                "unit": "degree"
             }
         },
         {
@@ -232,7 +232,7 @@
                 "pl": ""
             },
             "description": {
-                "en": "Set the overheat alarm clear trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
+                "en": "Set the overheat alarm clear trigger value (choose appropriate value range for Celsius or Fahrenheit that matches the value in parameter 33). Once the device detects temperature at the set value or lower, it will clear the heat alert it had sent to the hub.\n\n0-255 degrees set in Celsius\n256-511 degrees set in Fahrenheit (256 = 1F, 257 = 2F, etc)",
                 "pl": ""
             },
             "size": 2,
@@ -243,7 +243,7 @@
                 "max": 511,
                 "step": 1,
                 "scale": 1.0,
-                "unit": "°F"
+                "unit": "degree"
             }
         },
         {
@@ -337,7 +337,7 @@
                 "pl": ""
             },
             "description": {
-                "en": "Set the freeze alarm trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
+                "en": "Set the freeze alarm trigger value (choose appropriate value range for Celsius or Fahrenheit that matches the value in parameter 33). Once the device detects temperature at the set value or lower, it will send a freeze alert to the hub.\n\n0-255 degrees set in Celsius\n256-511 degrees set in Fahrenheit (256 = 1F, 257 = 2F, etc)",
                 "pl": ""
             },
             "size": 2,
@@ -348,7 +348,7 @@
                 "max": 511,
                 "step": 1,
                 "scale": 1.0,
-                "unit": "°F"
+                "unit": "degree"
             }
         },
         {
@@ -358,8 +358,8 @@
                 "pl": ""
             },
             "description": {
-                "en": "Set the freeze alarm clear trigger value. Values 0-255 for Celsius degrees, values 256-511 for Fahrenheit degrees.",
-                "pl": ""
+                "en": "Set the freeze alarm clear trigger value (choose appropriate value range for Celsius or Fahrenheit that matches the value in parameter 33). Once the device detects temperature at the set value or higher, it will clear the freeze alert it had sent to the hub.\n\n0-255 degrees set in Celsius\n256-511 degrees set in Fahrenheit (256 = 1F, 257 = 2F, etc)",
+                                "pl": ""
             },
             "size": 2,
             "defaultValue": 292,
@@ -369,7 +369,7 @@
                 "max": 511,
                 "step": 1,
                 "scale": 1.0,
-                "unit": "°F"
+                "unit": "degree"
             },
             "unsigned": true
         },
