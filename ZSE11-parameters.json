@@ -1,0 +1,674 @@
+{
+    "description": "ZSE11 800-Series Q Sensor",
+    "parameters": [
+        {
+            "parameterNumber": 12,
+            "label": {
+                "en": "Motion Sensitivity ",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set motion sensitivity for the motion detector to minimize false alerts. Set value to 0 to disable motion reports.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 6,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "motion reports disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 8,
+						"step": 1,
+						"scale": 1.0
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 13,
+            "label": {
+                "en": "Motion Clear Delay",
+                "pl": ""
+            },
+            "description": {
+                "en": "The amount of time the device waits to send a motion clear notification after the last motion event is detected.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 30,
+            "format": {
+                "type": "range",
+                "min": 10,
+                "max": 3600,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "s"
+            }
+        },
+        {
+            "parameterNumber": 14,
+            "label": {
+                "en": "Disable Basic Set Reporting",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable basic set reporting when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable Basic Set Reports for motion",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable Basic Set Reports for motion",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 15,
+            "label": {
+                "en": "Basic Set Reporting Values",
+                "pl": ""
+            },
+            "description": {
+                "en": "Select the basic set value to be sent when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Send 0xFF basic set report (ON) when motion is detected (default)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Send 0x00 basic set report (OFF) when motion is detected.",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 16,
+            "label": {
+                "en": "Disable Binary Sensor Reporting",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable binary sensor reporting when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable Binary Sensor Reports for motion",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable Binary Sensor for motion",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 18,
+            "label": {
+                "en": "Temperature Reporting Unit",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the temperature reporting unit. 1 - Celsius, 2 - Fahrenheit.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Celsius",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Fahrenheit",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 19,
+            "label": {
+                "en": "LED Indicator",
+                "pl": ""
+            },
+            "description": {
+                "en": "Decide if you want the LED indicator to blink when motion is detected.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "LED doesn't blink when motion detected",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "LED blinks when motion detected",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 20,
+            "label": {
+                "en": "Disable Vibration Reports",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable vibration reports for the sensor (value 0). ",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable Vibration Reports",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable Vibration Reports",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 21,
+            "label": {
+                "en": "Lux Check-in Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set how often you want the device to check lux level for changes. Set value to 0 to disable this sensor.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 10,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Lux readings disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 43200,
+						"step": 1,
+						"scale": 1.0,
+						"unit": " seconds"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 22,
+            "label": {
+                "en": "Temperature Check-in Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set how often you want the device to check ambient temperature for changes. Set value to 0 to disable this sensor.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 60,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Temperature readings disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 43200,
+						"step": 1,
+						"scale": 1.0,
+						"unit": " seconds"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 23,
+            "label": {
+                "en": "Humidity Check-in Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set how often you want the device to check ambient humidity for changes. Set value to 0 to disable this sensor.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 60,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Humidity readings disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 43200,
+						"step": 1,
+						"scale": 1.0,
+						"unit": " seconds"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 32,
+            "label": {
+                "en": "Low Battery Report",
+                "pl": ""
+            },
+            "description": {
+                "en": "Which % level should the device report low battery to the hub.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 10,
+            "format": {
+                "type": "range",
+                "min": 10,
+                "max": 50,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "%"
+            }
+        },
+        {
+            "parameterNumber": 172,
+            "label": {
+                "en": "Reporting Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the reporting frequency for battery, temperature, humidity, and light level. Used if reporting threshold settings are set to 0.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 4,
+            "format": {
+                "type": "range",
+                "min": 1,
+                "max": 744,
+                "step": 1,
+                "scale": 1,
+                "unit": "hours"
+            }
+        },
+        {
+            "parameterNumber": 173,
+            "label": {
+                "en": "Temperature Reporting Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the reporting interval for temperature. Values 1-43200 will send a report regardless of the reporting threshold setting.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Reports based on threshold setting only",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 43200,
+						"step": 1,
+						"scale": 1.0,
+						"unit": " seconds"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 174,
+            "label": {
+                "en": "Humidity Reporting Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the reporting interval for humidity. Values 1-43200 will send a report regardless of the reporting threshold setting.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Reports based on threshold setting only",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 43200,
+						"step": 1,
+						"scale": 1.0,
+						"unit": " seconds"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 175,
+            "label": {
+                "en": "Lux Reporting Frequency",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the reporting interval for lux. Values 1-43200 will send a report regardless of the reporting threshold setting.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Reports based on threshold setting only",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 43200,
+						"step": 1,
+						"scale": 1.0,
+						"unit": " seconds"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 183,
+            "label": {
+                "en": "Temperature Reporting Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the threshold for temperature reporting in F degree changes. Set value to 0 to ignore changes and report based on frequency.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Temperature reporting based on changes disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+						"type": "range",
+						"min": 1,
+						"max": 144,
+						"step": 1,
+						"scale": 1.0,
+						"unit": ""
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 184,
+            "label": {
+                "en": "Humidity Reporting Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the threshold for Humidity reporting in % changes. Set value to 0 to ignore changes and report based on frequency.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 5,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Humidity reporting based on changes disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 80,
+                        "step": 1,
+                        "scale": 1.0,
+                        "unit": " %"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 185,
+            "label": {
+                "en": "Lux Reporting Threshold",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the threshold for lux reporting. Set value to 0 to to ignore changes and report based on frequency.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 50,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Lux reporting based on changes disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 30000,
+                        "step": 1,
+                        "scale": 1.0,
+                        "unit": " lux"
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 201,
+            "label": {
+                "en": "Temperature Offset",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the temperature reporting offset. Value 100 = no offset. Refer to documentation for more details. Expert users only.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 100,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 200,
+                "step": 1,
+                "scale": 1,
+                "unit": ""
+            }
+        },
+        {
+            "parameterNumber": 202,
+            "label": {
+                "en": "Humidity Offset",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the humidity reporting offset. Value 100 = no offset. Refer to documentation for more details. Expert users only.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 100,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 200,
+                "step": 1,
+                "scale": 1,
+                "unit": ""
+            }
+        },
+        {
+            "parameterNumber": 203,
+            "label": {
+                "en": "Lux Offset",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the lux reporting offset. Value 100 = no offset. Refer to documentation for more details. Expert users only.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 100,
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 200,
+                "step": 1,
+                "scale": 1,
+                "unit": ""
+            }
+        }
+   ]
+}
