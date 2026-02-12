@@ -1,0 +1,805 @@
+{
+    "description": "ZEN52 Double Relay",
+    "parameters": [
+        {
+            "parameterNumber": 2,
+            "label": {
+                "en": "LED Indicator",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose if you want the LED to indicate the on/off status of the load or if you want it to remain on or off at all times.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "LED always off",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "LED on when either load on, LED off when both loads off",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 3,
+            "label": {
+                "en": "Relay 1 Auto Turn-Off Timer",
+                "pl": ""
+            },
+            "description": {
+                "en": "Auto-off timer will automatically turn relay 1 off after x seconds or minutes (unit set in parameter 7) once it has been turned on.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 65535,
+                        "step": 1,
+                        "scale": 1.0
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 4,
+            "label": {
+                "en": "Relay 1 Auto Turn-On Timer",
+                "pl": ""
+            },
+            "description": {
+                "en": "Auto-on timer will automatically turn relay 1 on after x seconds or minutes (unit set in parameter 7) once it has been turned off.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 65535,
+                        "step": 1,
+                        "scale": 1.0
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 5,
+            "label": {
+                "en": "Relay 2 Auto Turn-Off Timer",
+                "pl": ""
+            },
+            "description": {
+                "en": "Auto-off timer will automatically turn relay 2 off after x seconds or minutes (unit set in parameter 8) once it has been turned on.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 65535,
+                        "step": 1,
+                        "scale": 1.0
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 6,
+            "label": {
+                "en": "Relay 2 Auto Turn-On Timer",
+                "pl": ""
+            },
+            "description": {
+                "en": "Auto-on timer will automatically turn relay 2 on after x seconds or minutes (unit set in parameter 8) once it has been turned off.",
+                "pl": ""
+            },
+            "size": 2,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Timer disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "min": 1,
+                        "max": 65535,
+                        "step": 1,
+                        "scale": 1.0
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 7,
+            "label": {
+                "en": "Relay 1 Timer Unit",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose between seconds (2) or minutes (1) as the unit for the auto turn-off and turn-on timer for relay 1.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Minutes",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Seconds",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 8,
+            "label": {
+                "en": "Relay 2 Timer Unit",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose between seconds (2) or minutes (1) as the unit for the auto turn-off and turn-on timer for relay 2.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Minutes",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Seconds",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 14,
+            "label": {
+                "en": "Relay 1 On/Off Status After Power Failure",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the on off status for relay 1 after power failure.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "always off once restored",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "always on once restored",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "remembers and restores status",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 15,
+            "label": {
+                "en": "Relay 2 On/Off Status After Power Failure",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set the on off status for relay 2 after power failure.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "always off once restored",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "always on once restored",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "remembers and restores status",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 16,
+            "label": {
+                "en": "Scene Control",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable scene control functionality for quick double tap triggers.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "scene control disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "scene control enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 17,
+            "label": {
+                "en": "Relay 1 Control (Smart Bulb Mode)",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable physical and Z-Wave on/off control for relay 1. Disable both (value 2) for smart bulbs.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable control from switch and button",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable switch, button, and Z-Wave control",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Disable switch, button, and Z-Wave control",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 18,
+            "label": {
+                "en": "Relay 2 Control (Smart Bulb Mode)",
+                "pl": ""
+            },
+            "description": {
+                "en": "Enable or disable physical and Z-Wave on/off control for relay 2. Disable both (value 2) for smart bulbs.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Disable control from switch and button",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Enable switch, button, and Z-Wave control",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Disable switch, button, and Z-Wave control",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 20,
+            "label": {
+                "en": "Relay 1 Switch Type",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose the wall switch type you want to connect to relay 1. See manual for details.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "toggle switch (state changes whenever the switch is toggled)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "momentary push button",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "toggle switch (light on when the switch is toggled up, light off when the switch is toggled down)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 3,
+                        "description": {
+                            "en": "3-way impulse control",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 21,
+            "label": {
+                "en": "Relay 2 Switch Type",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose the wall switch type you want to connect to relay 2. See manual for details.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 2,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "toggle switch (state changes whenever the switch is toggled)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "momentary push button",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "toggle switch (light on when the switch is toggled up, light off when the switch is toggled down)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 3,
+                        "description": {
+                            "en": "3-way impulse control",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 22,
+            "label": {
+                "en": "Relay 1 3-Way Impulse Duration",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose the duration of the impulse if you're using relay 1 with 3-way impulse control (parameter 20 set to value 3).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 10,
+            "format": {
+                "type": "range",
+                "min": 2,
+                "max": 200,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "s"
+            },
+            "unsigned": true
+        },
+        {
+            "parameterNumber": 23,
+            "label": {
+                "en": "Relay 2 3-Way Impulse Duration",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose the duration of the impulse if you're using relay 2 with 3-way impulse control (parameter 21 set to value 3).",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 10,
+            "format": {
+                "type": "range",
+                "min": 2,
+                "max": 200,
+                "step": 1,
+                "scale": 1.0,
+                "unit": "s"
+            },
+            "unsigned": true
+        },
+        {
+            "parameterNumber": 24,
+            "label": {
+                "en": "Status Report Type",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose physical (wall switch) and Z-Wave triggers for the relays to send a status change report to the hub. See manual for details.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Binary Switch reports for Z-Wave control and Basic Reports for wall switch control",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Binary Switch reports for both Z-Wave and wall switch control",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 25,
+            "label": {
+                "en": "Relay 1 Type (NO/NC)",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set relay 1 to act as normally closed (1). Expert users only. See manual for details.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "NO (normally open)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "NC (normally closed)",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 26,
+            "label": {
+                "en": "Relay 2 Type (NO/NC)",
+                "pl": ""
+            },
+            "description": {
+                "en": "Set relay 2 to act as normally closed (1). Expert users only. See manual for details.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "NO (normally open)",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "NC (normally closed)",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 27,
+            "label": {
+                "en": "Scene Control Multi-Tap",
+                "pl": ""
+            },
+            "description": {
+                "en": "Disable multi-tap scene control so that only single taps from the connected wall switch report via central scene.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 1,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "multi-tap for scene control disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "multi-tap for scene control enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 28,
+            "label": {
+                "en": "Input Trigger",
+                "pl": ""
+            },
+            "description": {
+                "en": "Choose whether the inputs (wall switches) on the ZEN52 trigger the outputs (loads) or just send input reports for monitoring, keeping outputs separate.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "Input trigger enabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "Input trigger disabled for S1 only",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 2,
+                        "description": {
+                            "en": "Input trigger disabled for S2 only",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 3,
+                        "description": {
+                            "en": "Input trigger disabled for both S1 and S2",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "parameterNumber": 29,
+            "label": {
+                "en": "DC Motor Mode",
+                "pl": ""
+            },
+            "description": {
+                "en": "Sync relay 1 and relay 2 to prevent them from being activated at the same time. Set value to 1 to enable the DC motor mode.",
+                "pl": ""
+            },
+            "size": 1,
+            "defaultValue": 0,
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "type": "value",
+                        "value": 0,
+                        "description": {
+                            "en": "DC motor mode disabled",
+                            "pl": ""
+                        }
+                    },
+                    {
+                        "type": "value",
+                        "value": 1,
+                        "description": {
+                            "en": "DC motor mode enabled",
+                            "pl": ""
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
